@@ -217,5 +217,9 @@
     
     <!-- Screenshot -->
     <string name="shortcut_screenshot">Screenshot</string>
+    
+    <!-- Navbar Tile -->
+    <string name="quick_settings_navbar_on">NavBar On</string>
+    <string name="quick_settings_navbar_off">NavBar Off</string>
 
 </resources>

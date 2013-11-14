@@ -57,6 +57,7 @@ import com.android.systemui.qs.tiles.ScreenOffTile;
 import com.android.systemui.qs.tiles.ScreenshotTile;
 import com.android.systemui.qs.tiles.ScreenTimeoutTile;
 import com.android.systemui.qs.tiles.SyncTile;
+import com.android.systemui.qs.tiles.NavBarTile;
 import com.android.systemui.qs.tiles.VolumeTile;
 import com.android.systemui.qs.tiles.WifiTile;
 import com.android.systemui.settings.CurrentUserTracker;
@@ -315,6 +316,8 @@ public class QSTileHost implements QSTile.Host {
                 return new ScreenOffTile(this);
             case QSConstants.TILE_EXPANDED_DESKTOP:
                 return new ExpandedDesktopTile(this);
+            case QSConstants.TILE_NAVBAR:
+                return new NavBarTile(this);
             case QSConstants.TILE_VOLUME:
                 return new VolumeTile(this);
             case QSConstants.TILE_AMBIENT_DISPLAY:
