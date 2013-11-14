@@ -214,5 +214,8 @@
     <!-- SystemUI Tuner Parts -->
     <string name="systemui_tuner_statusbar_title">Statusbar Items</string>
     <string name="systemui_tuner_qs_title">Quick Settings</string>
+    
+    <!-- Screenshot -->
+    <string name="shortcut_screenshot">Screenshot</string>
 
 </resources>
