@@ -116,4 +116,6 @@
     <!-- Side padding for the Quick Settings panel -->
     <dimen name="qs_panel_side_padding">@dimen/notification_side_padding</dimen>
 
+    <!-- The task item height in task list. -->
+    <dimen name="task_manager_item_height">40dip</dimen>
 </resources>
