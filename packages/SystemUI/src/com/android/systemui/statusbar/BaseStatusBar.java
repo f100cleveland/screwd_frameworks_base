@@ -36,6 +36,7 @@ import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.ComponentName;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ApplicationInfo;
@@ -105,6 +106,9 @@ import com.android.internal.logging.MetricsLogger;
 import com.android.internal.statusbar.IStatusBarService;
 import com.android.internal.statusbar.StatusBarIcon;
 import com.android.internal.statusbar.StatusBarIconList;
+import com.android.internal.util.cm.SpamFilter;
+import com.android.internal.util.cm.SpamFilter.SpamContract.NotificationTable;
+import com.android.internal.util.cm.SpamFilter.SpamContract.PackageTable;
 import com.android.internal.util.NotificationColorUtil;
 import com.android.internal.util.du.OmniSwitchConstants;
 import com.android.internal.widget.LockPatternUtils;
@@ -119,6 +123,7 @@ import com.android.systemui.assist.AssistManager;
 import com.android.systemui.chaos.lab.gestureanywhere.GestureAnywhereView;
 import com.android.systemui.recents.Recents;
 import com.android.systemui.slimrecent.RecentController;
+import com.android.systemui.cm.SpamMessageProvider;
 import com.android.systemui.statusbar.NotificationData.Entry;
 import com.android.systemui.statusbar.appcirclesidebar.AppCircleSidebar;
 import com.android.systemui.statusbar.phone.NavigationBarView;
@@ -172,6 +177,12 @@ public abstract class BaseStatusBar extends SystemUI implements
             "com.android.systemui.statusbar.banner_action_cancel";
     private static final String BANNER_ACTION_SETUP =
             "com.android.systemui.statusbar.banner_action_setup";
+
+    private static final Uri SPAM_MESSAGE_URI = new Uri.Builder()
+           .scheme(ContentResolver.SCHEME_CONTENT)
+            .authority(SpamMessageProvider.AUTHORITY)
+            .appendPath("message")
+            .build();
 
     protected CommandQueue mCommandQueue;
     protected IStatusBarService mBarService;
@@ -1091,12 +1102,26 @@ public abstract class BaseStatusBar extends SystemUI implements
         final View settingsButton = guts.findViewById(R.id.notification_inspect_item);
         final View appSettingsButton
                 = guts.findViewById(R.id.notification_inspect_app_provided_settings);
+        final View filterButton = guts.findViewById(R.id.notification_inspect_filter_notification);
         if (appUid >= 0) {
             final int appUidF = appUid;
             settingsButton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     MetricsLogger.action(mContext, MetricsLogger.ACTION_NOTE_INFO);
                     startAppNotificationSettingsActivity(pkg, appUidF);
+                }
+            });
+
+            filterButton.setVisibility(View.VISIBLE);
+            filterButton.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    ContentValues values = new ContentValues();
+                    String message = SpamFilter.getNotificationContent(
+                    sbn.getNotification());
+                    values.put(NotificationTable.MESSAGE_TEXT, message);
+                    values.put(PackageTable.PACKAGE_NAME, pkg);
+                    mContext.getContentResolver().insert(SPAM_MESSAGE_URI, values);
+                    removeNotification(sbn.getKey(), null);
                 }
             });
 
@@ -1129,6 +1154,7 @@ public abstract class BaseStatusBar extends SystemUI implements
         } else {
             settingsButton.setVisibility(View.GONE);
             appSettingsButton.setVisibility(View.GONE);
+            filterButton.setVisibility(View.GONE);
         }
 
     }
