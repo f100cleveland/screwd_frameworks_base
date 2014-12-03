@@ -4895,6 +4895,12 @@ public final class Settings {
          * @hide
          */
         public static final String HIDE_LOCKSCREEN_CLOCK = "hide_lockscreen_clock";
+		
+		/**
+		 * Quick Settings Smart Pulldown
+         * @hide
+         */
+        public static final String QS_SMART_PULLDOWN = "qs_smart_pulldown";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
