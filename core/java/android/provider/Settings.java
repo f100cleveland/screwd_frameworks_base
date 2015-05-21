@@ -4824,6 +4824,12 @@ public final class Settings {
          * @hide
          */
         public static final String TRANSPARENT_POWER_MENU = "transparent_power_menu";
+		
+		/**
+         * Enable built in CAF task manager
+         * @hide
+         */
+        public static final String ENABLE_TASK_MANAGER = "enable_task_manager";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
