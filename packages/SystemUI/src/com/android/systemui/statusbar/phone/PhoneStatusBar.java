@@ -510,10 +510,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                     false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.MENU_VISIBILITY),
-                    false, this, UserHandle.USER_ALL);
-            resolver.registerContentObserver(Settings.System.getUriFor(
-                    Settings.System.NAVIGATION_BAR_IME_ARROWS),
-                    false, this, UserHandle.USER_ALL);						
+                    false, this, UserHandle.USER_ALL);				
             update();
         }
 
@@ -575,11 +572,6 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
             } else if (uri.equals(Settings.System.getUriFor(
                     Settings.System.NAVIGATION_BAR_CAN_MOVE))) {
                 prepareNavigationBarView();
-            } else if (uri.equals(Settings.System.getUriFor(
-                    Settings.System.NAVIGATION_BAR_IME_ARROWS))) {
-                if (mNavigationBarView != null) {
-                    mNavigationBarView.updateNavigationBarSettings();
-                }
             }
             update();
         }
