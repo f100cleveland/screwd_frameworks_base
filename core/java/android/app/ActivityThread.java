@@ -5243,7 +5243,9 @@ public final class ActivityThread {
             RuntimeInit.setApplicationObject(mAppThread.asBinder());
             final IActivityManager mgr = ActivityManagerNative.getDefault();
             try {
-                mgr.attachApplication(mAppThread);
+                if (mgr != null) {
+                    mgr.attachApplication(mAppThread);
+                }
             } catch (RemoteException ex) {
                 // Ignore
             }
@@ -5262,7 +5264,9 @@ public final class ActivityThread {
                                 + " used=" + (dalvikUsed/1024));
                         mSomeActivitiesChanged = false;
                         try {
-                            mgr.releaseSomeActivities(mAppThread);
+                            if (mgr != null) {
+                                mgr.releaseSomeActivities(mAppThread);
+                            }
                         } catch (RemoteException e) {
                         }
                     }
