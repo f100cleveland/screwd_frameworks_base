@@ -4007,6 +4007,12 @@ public final class Settings {
         public static final String STATUS_BAR_IME_ARROWS = "status_bar_ime_arrows";
 
         /**
+         * Disabled Transition animations of the android system
+         * @hide
+         */
+        public static final String DISABLE_TRANSITION_ANIMATIONS = "disable_transition_animations";
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
