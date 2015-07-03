@@ -177,6 +177,9 @@
 
     <!-- NFC QS tile -->
     <string name="quick_settings_nfc_label">NFC</string>
+    
+    <!-- Pie tile -->
+    <string name="quick_settings_pie_label">Pie</string>
 
     <!-- Reboot/Recovery QS Tile -->
     <string name="quick_settings_reboot_label">Reboot</string>
