@@ -4907,6 +4907,12 @@ public final class Settings {
          * @hide
          */
         public static final String QS_SMART_PULLDOWN = "qs_smart_pulldown";
+		
+		/**
+         * Statusbar SCREW'D logo
+         * @hide
+         */
+        public static final String STATUS_BAR_SCREWD_LOGO = "status_bar_screwd_logo";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings

@@ -62,7 +62,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 >
-                <TextView
+                <ImageView
+                    android:id="@+id/screwd_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="4dip"
+                    android:src="@drawable/ic_statusbar_screwd"
+                    android:scaleType="center"
+                    android:visibility="gone"
+                    />
+		
+		<TextView
                     android:id="@+id/left_weather_temp"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -80,7 +90,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:singleLine="true"
-                    android:paddingEnd="6dip"
+                    android:paddingEnd="1dip"
                     android:gravity="center"
                     android:visibility="gone"
                     />

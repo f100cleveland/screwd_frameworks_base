@@ -398,6 +398,10 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
 
     boolean mExpandedVisible;
 
+    // Screwd logo
+    private boolean mScrewdLogo;
+    private ImageView screwdLogo;
+
     private int mNavigationBarWindowState = WINDOW_STATE_SHOWING;
 
     private int mStatusBarHeaderHeight;
@@ -531,6 +535,9 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
             resolver.registerContentObserver(Settings.Secure.getUriFor(
                     Settings.Secure.QS_NUM_TILE_COLUMNS), false, this,
                     UserHandle.USER_ALL);
+			resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.STATUS_BAR_SCREWD_LOGO),
+                    false, this, UserHandle.USER_ALL);		
             update();
         }
 
@@ -620,6 +627,10 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
 
             mBlurRadius = Settings.System.getInt(resolver,
                     Settings.System.LOCKSCREEN_BLUR_RADIUS, 14);
+					
+			mScrewdLogo = Settings.System.getIntForUser(resolver,
+                    Settings.System.STATUS_BAR_SCREWD_LOGO, 0, mCurrentUserId) == 1;
+            showScrewdLogo(mScrewdLogo);
 
             final int oldWeatherState = mWeatherTempState;
             mWeatherTempState = Settings.System.getIntForUser(
@@ -3657,6 +3668,15 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
             }
         }
     };
+
+    public void showScrewdLogo(boolean show) {
+        if (mStatusBarView == null) return;
+        ContentResolver resolver = mContext.getContentResolver();
+        screwdLogo = (ImageView) mStatusBarView.findViewById(R.id.screwd_logo);
+        if (screwdLogo != null) {
+            screwdLogo.setVisibility(show ? (mScrewdLogo ? View.VISIBLE : View.GONE) : View.GONE);
+        }
+    }
 
     private void resetUserExpandedStates() {
         ArrayList<Entry> activeNotifications = mNotificationData.getActiveNotifications();
