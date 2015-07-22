@@ -4913,6 +4913,12 @@ public final class Settings {
          * @hide
          */
         public static final String STATUS_BAR_SCREWD_LOGO = "status_bar_screwd_logo";
+		
+		/**
+         * Statusbar SCREWD logo color setting
+         * @hide
+         */
+        public static final String STATUS_BAR_SCREWD_LOGO_COLOR = "status_bar_screwd_logo_color";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings

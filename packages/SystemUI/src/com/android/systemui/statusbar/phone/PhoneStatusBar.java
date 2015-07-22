@@ -53,6 +53,7 @@ import android.graphics.PixelFormat;
 import android.graphics.Point;
 import android.graphics.PointF;
 import android.graphics.PorterDuff;
+import android.graphics.PorterDuff.Mode;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
@@ -400,6 +401,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
 
     // Screwd logo
     private boolean mScrewdLogo;
+    private int mScrewdLogoColor;
     private ImageView screwdLogo;
 
     private int mNavigationBarWindowState = WINDOW_STATE_SHOWING;
@@ -537,6 +539,9 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                     UserHandle.USER_ALL);
 			resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.STATUS_BAR_SCREWD_LOGO),
+                    false, this, UserHandle.USER_ALL);
+			resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.STATUS_BAR_SCREWD_LOGO_COLOR),
                     false, this, UserHandle.USER_ALL);		
             update();
         }
@@ -630,7 +635,9 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
 					
 			mScrewdLogo = Settings.System.getIntForUser(resolver,
                     Settings.System.STATUS_BAR_SCREWD_LOGO, 0, mCurrentUserId) == 1;
-            showScrewdLogo(mScrewdLogo);
+            mScrewdLogoColor = Settings.System.getIntForUser(resolver,
+                    Settings.System.STATUS_BAR_SCREWD_LOGO_COLOR, 0xFFFFFFFF, mCurrentUserId);
+            showScrewdLogo(mScrewdLogo, mScrewdLogoColor);
 
             final int oldWeatherState = mWeatherTempState;
             mWeatherTempState = Settings.System.getIntForUser(
@@ -3669,10 +3676,11 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         }
     };
 
-    public void showScrewdLogo(boolean show) {
+    public void showScrewdLogo(boolean show, int color) {
         if (mStatusBarView == null) return;
         ContentResolver resolver = mContext.getContentResolver();
         screwdLogo = (ImageView) mStatusBarView.findViewById(R.id.screwd_logo);
+        screwdLogo.setColorFilter(color, Mode.SRC_IN);
         if (screwdLogo != null) {
             screwdLogo.setVisibility(show ? (mScrewdLogo ? View.VISIBLE : View.GONE) : View.GONE);
         }
