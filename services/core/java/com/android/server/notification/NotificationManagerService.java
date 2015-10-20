@@ -814,9 +814,6 @@ public class NotificationManagerService extends SystemService {
     private final class LEDSettingsObserver extends ContentObserver {
         private final Uri NOTIFICATION_LIGHT_PULSE_URI
                 = Settings.System.getUriFor(Settings.System.NOTIFICATION_LIGHT_PULSE);
-		
-		private final Uri ENABLED_NOTIFICATION_LISTENERS_URI
-                = Settings.Secure.getUriFor(Settings.Secure.ENABLED_NOTIFICATION_LISTENERS);		
 
         LEDSettingsObserver(Handler handler) {
             super(handler);
