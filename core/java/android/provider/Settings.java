@@ -4681,6 +4681,12 @@ public final class Settings {
          * @hide
          */
         public static final String RECENT_APP_SIDEBAR_SCALE_FACTOR = "recent_app_sidebar_scale_factor";
+		
+		/**
+		 * Whether or not volume button music controls should be enabled to seek media tracks
+         * @hide
+         */
+        public static final String VOLBTN_MUSIC_CONTROLS = "volbtn_music_controls";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
