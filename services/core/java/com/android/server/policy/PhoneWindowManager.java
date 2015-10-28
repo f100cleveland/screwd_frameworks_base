@@ -779,19 +779,10 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     UserHandle.USER_ALL);    
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.ACCELEROMETER_ROTATION_ANGLES), false, this,
-		    UserHandle.USER_ALL);
-<<<<<<< HEAD
-=======
-            resolver.registerContentObserver(Settings.System.getUriFor(
-                    Settings.System.VOLUME_ROCKER_WAKE), false, this,
-                    UserHandle.USER_ALL);
-            resolver.registerContentObserver(Settings.System.getUriFor(
-                    Settings.System.VOLBTN_MUSIC_CONTROLS), false, this,
-                    UserHandle.USER_ALL);
+		    		UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.NAVBAR_LEFT_IN_LANDSCAPE), false, this,
                     UserHandle.USER_ALL);
->>>>>>> 273ef5a... Left handed navbar during landscape mode
             updateSettings();
         }
 
