@@ -572,6 +572,27 @@ final class DefaultPermissionGrantPolicy {
                 grantRuntimePermissionsLPw(musicPackage, STORAGE_PERMISSIONS, userId);
             }
 
+            // Chromium Regular
+            PackageParser.Package chromiumPackage = getDefaultProviderAuthorityPackageLPr(
+                    "org.chromium.chrome", userId);
+            if (chromiumPackage != null) {
+                grantRuntimePermissionsLPw(chromiumPackage, CONTACTS_PERMISSIONS, userId);
+            }
+
+            // Chromium Other
+            PackageParser.Package chromiumPackage = getDefaultProviderAuthorityPackageLPr(
+                    "org.swe.atego.browser", userId);
+            if (chromiumPackage != null) {
+                grantRuntimePermissionsLPw(chromiumPackage, CONTACTS_PERMISSIONS, userId);
+            }
+
+            // SaberChrome
+            PackageParser.Package chromiumPackage = getDefaultProviderAuthorityPackageLPr(
+                    "org.frap129.saberchrome.browser", userId);
+            if (chromiumPackage != null) {
+                grantRuntimePermissionsLPw(chromiumPackage, CONTACTS_PERMISSIONS, userId);
+            }
+
             // Google Account
             PackageParser.Package googleaccountPackage = getDefaultProviderAuthorityPackageLPr(
                     "com.google.android.gsf.login", userId);
