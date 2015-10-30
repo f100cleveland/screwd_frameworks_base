@@ -573,24 +573,24 @@ final class DefaultPermissionGrantPolicy {
             }
 
             // Chromium Regular
-            PackageParser.Package chromiumPackage = getDefaultProviderAuthorityPackageLPr(
+            PackageParser.Package chromiumPackageReg = getDefaultProviderAuthorityPackageLPr(
                     "org.chromium.chrome", userId);
-            if (chromiumPackage != null) {
-                grantRuntimePermissionsLPw(chromiumPackage, CONTACTS_PERMISSIONS, userId);
+            if (chromiumPackageReg != null) {
+                grantRuntimePermissionsLPw(chromiumPackageReg, CONTACTS_PERMISSIONS, userId);
             }
 
             // Chromium Other
-            PackageParser.Package chromiumPackage = getDefaultProviderAuthorityPackageLPr(
+            PackageParser.Package chromiumPackageOther = getDefaultProviderAuthorityPackageLPr(
                     "org.swe.atego.browser", userId);
-            if (chromiumPackage != null) {
-                grantRuntimePermissionsLPw(chromiumPackage, CONTACTS_PERMISSIONS, userId);
+            if (chromiumPackageOther != null) {
+                grantRuntimePermissionsLPw(chromiumPackageOther, CONTACTS_PERMISSIONS, userId);
             }
 
             // SaberChrome
-            PackageParser.Package chromiumPackage = getDefaultProviderAuthorityPackageLPr(
+            PackageParser.Package chromiumPackageSaber = getDefaultProviderAuthorityPackageLPr(
                     "org.frap129.saberchrome.browser", userId);
-            if (chromiumPackage != null) {
-                grantRuntimePermissionsLPw(chromiumPackage, CONTACTS_PERMISSIONS, userId);
+            if (chromiumPackageSaber != null) {
+                grantRuntimePermissionsLPw(chromiumPackageSaber, CONTACTS_PERMISSIONS, userId);
             }
 
             // Google Account
