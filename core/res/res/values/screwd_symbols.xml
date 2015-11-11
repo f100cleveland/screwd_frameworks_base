@@ -53,6 +53,10 @@
   <java-symbol type="dimen" name="global_actions_avatar_size" />
   <java-symbol type="string" name="global_action_current_user" />
   
+  <!-- Custom styles for dialog themes -->
+  <java-symbol type="style" name="Theme.Material.ScrewdDark.Dialog" />
+  <java-symbol type="style" name="Theme.Material.ScrewdDark.Dialog.Alert" />
+  
   <!-- Notification and battery light -->
   <java-symbol type="bool" name="config_intrusiveNotificationLed" />
   <java-symbol type="bool" name="config_multiColorNotificationLed" />
