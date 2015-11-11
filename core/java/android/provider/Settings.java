@@ -4098,12 +4098,6 @@ public final class Settings {
         public static final String LOCKSCREEN_ENABLE_POWER_MENU = "lockscreen_enable_power_menu";
 
         /**
-         * Whether to show the IME arrows in the status bar
-         * @hide
-         */
-        public static final String STATUS_BAR_IME_ARROWS = "status_bar_ime_arrows";
-
-        /**
          * Disabled Transition animations of the android system
          * @hide
          */
