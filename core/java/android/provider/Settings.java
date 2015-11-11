@@ -4069,12 +4069,6 @@ public final class Settings {
         public static final String DISABLE_TRANSITION_ANIMATIONS = "disable_transition_animations";
 
         /**
-         * Whether the left icon on lockscreen is voice or phone
-         * @hide
-         */
-        public static final String LOCKSCREEN_VOICE_SHORTCUT = "lockscreen_voice_shortcut";
-
-        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
