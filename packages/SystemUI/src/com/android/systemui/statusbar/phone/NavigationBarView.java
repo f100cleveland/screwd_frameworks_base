@@ -123,18 +123,6 @@ public class NavigationBarView extends LinearLayout {
     private int mDimNavButtonsAnimateDuration;
     private boolean mDimNavButtonsTouchAnywhere;
 
-
-    /**
-     * Tracks the current visibilities of the far left (R.id.one) and right (R.id.six) buttons
-     * while dpad arrow keys are visible.
-     *
-     * We keep track of the orientations separately because they can get in different states,
-     * We can be showing dpad arrow keys on vertical, but on portrait that may not be so.
-     */
-    public int[][] mSideButtonVisibilities = new int[][] {
-        {-1, -1} /* portrait */, {-1, -1} /* vertical */
-    };
-
     // workaround for LayoutTransitions leaving the nav buttons in a weird state (bug 5549288)
     final static boolean WORKAROUND_INVALID_LAYOUT = true;
     final static int MSG_CHECK_INVALID_LAYOUT = 8686;
@@ -150,7 +138,6 @@ public class NavigationBarView extends LinearLayout {
     private OnLongClickListener mRecentsBackListener;
     private OnLongClickListener mLongPressHomeListener;
 
-    private SettingsObserver mSettingsObserver;
     private boolean mShowDpadArrowKeys;
 
     // performs manual animation in sync with layout transitions
