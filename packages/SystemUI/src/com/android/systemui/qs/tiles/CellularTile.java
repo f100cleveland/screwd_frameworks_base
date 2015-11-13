@@ -89,6 +89,11 @@ public class CellularTile extends QSTile<QSTile.SignalState> {
     }
 
     @Override
+    protected void handleLongClick() {
+        mHost.startActivityDismissingKeyguard(MOBILE_NETWORK_SETTINGS);
+    }
+
+    @Override
     protected void handleUpdateState(SignalState state, Object arg) {
         state.visible = mController.hasMobileDataFeature();
         if (!state.visible) return;
