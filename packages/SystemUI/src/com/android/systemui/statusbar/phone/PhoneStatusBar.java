@@ -1075,7 +1075,6 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
             mUserSwitcherController = new UserSwitcherController(mContext, mKeyguardMonitor,
                     mHandler);
         }
-        mWeatherController = new WeatherControllerImpl(mContext);
         if (mWeatherController == null) {
             mWeatherController = new WeatherControllerImpl(mContext);
             mWeatherController.addCallback(new WeatherController.Callback() {
