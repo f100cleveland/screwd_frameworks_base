@@ -95,6 +95,7 @@ import android.util.ArraySet;
 import android.util.DisplayMetrics;
 import android.util.EventLog;
 import android.util.Log;
+import android.util.Pair;
 import android.view.Display;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -482,7 +483,8 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                 mStatusBarWindowManager.updateKeyguardScreenRotation();
 			} else if (uri.equals(Settings.System.getUriFor(
                     Settings.System.STATUS_BAR_CUSTOM_HEADER_DEFAULT))) {
-                    updateEmptyShadeView();		
+					mStatusBarHeaderMachine.updateEnablement();
+	         		mStatusBarHeaderMachine.doUpdateStatusHeaderObservers(true);
             }
             update();
         }
@@ -513,10 +515,12 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                         Settings.System.NAVBAR_LEFT_IN_LANDSCAPE, 0) == 1;
                 mNavigationBarView.setLeftInLandscape(navLeftInLandscape);
             }
+			
+			mStatusBarHeaderMachine.updateEnablement();
         }
     }
-
-    private void updateWeatherTextState(String temp) {
+    
+	private void updateWeatherTextState(String temp) {
         if (mWeatherTempView != null) {
             if (mWeatherTempState == 0 || TextUtils.isEmpty(temp)) {
                 mWeatherTempView.setVisibility(View.GONE);
