@@ -402,16 +402,13 @@ public class VolumeDialog {
                         if (hasVibrator) {
                             mController.setRingerMode(AudioManager.RINGER_MODE_VIBRATE, false);
                         } else {
-                            mController.setRingerMode(AudioManager.RINGER_MODE_SILENT, false);
+                            final boolean wasZero = row.ss.level == 0;
+                            mController.setStreamVolume(stream, wasZero ? row.lastAudibleLevel : 0);
                         }
-                    } else if (mState.ringerModeInternal == AudioManager.RINGER_MODE_VIBRATE) {
-                        mController.setRingerMode(AudioManager.RINGER_MODE_SILENT, false);
                     } else {
                         mController.setRingerMode(AudioManager.RINGER_MODE_NORMAL, false);
                         if (row.ss.level == 0) {
                             mController.setStreamVolume(stream, 1);
-                        } else {
-                            mController.setStreamVolume(stream, row.lastAudibleLevel);
                         }
                     }
                 } else {
@@ -711,8 +708,7 @@ public class VolumeDialog {
         row.icon.setAlpha(iconEnabled ? 1 : 0.5f);
         final int iconRes =
                 isRingVibrate ? R.drawable.ic_volume_ringer_vibrate
-                : isRingSilent ? R.drawable.ic_volume_ringer_mute
-                : zenMuted ? row.cachedIconRes
+                : isRingSilent || zenMuted ? row.cachedIconRes
                 : ss.routedToBluetooth ?
                         (ss.muted ? R.drawable.ic_volume_media_bt_mute
                                 : R.drawable.ic_volume_media_bt)
@@ -736,7 +732,7 @@ public class VolumeDialog {
 
         // update slider
         final boolean enableSlider = !zenMuted;
-        final int vlevel = row.ss.muted && (isRingSilent || isRingVibrate || !isRingStream && !zenMuted) ? 0
+        final int vlevel = row.ss.muted && (isRingVibrate || !isRingStream && !zenMuted) ? 0
                 : row.ss.level;
         updateVolumeRowSliderH(row, enableSlider, vlevel);
     }
