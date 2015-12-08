@@ -404,12 +404,7 @@ public class SeekBarVolumizer implements OnSeekBarChangeListener, Handler.Callba
             if (AudioManager.VOLUME_CHANGED_ACTION.equals(action)) {
                 int streamType = intent.getIntExtra(AudioManager.EXTRA_VOLUME_STREAM_TYPE, -1);
                 int streamValue = intent.getIntExtra(AudioManager.EXTRA_VOLUME_STREAM_VALUE, -1);
-                boolean streamMatch = streamType == mStreamType;
-                if (mSeekBar != null && streamMatch && streamValue != -1) {
-                    final boolean muted = mAudioManager.isStreamMute(mStreamType)
-                            || streamValue == 0;
-                    mUiHandler.postUpdateSlider(streamValue, mLastAudibleStreamVolume, muted);
-                }
+                updateVolumeSlider(streamType, streamValue);
             } else if (AudioManager.INTERNAL_RINGER_MODE_CHANGED_ACTION.equals(action)) {
                 if (mNotificationOrRing) {
                     mRingerMode = mAudioManager.getRingerModeInternal();
@@ -428,8 +423,7 @@ public class SeekBarVolumizer implements OnSeekBarChangeListener, Handler.Callba
         }
 
         private void updateVolumeSlider(int streamType, int streamValue) {
-            final boolean streamMatch = mNotificationOrRing ? isNotificationOrRing(streamType)
-                    : (streamType == mStreamType);
+            boolean streamMatch = streamType == mStreamType;
             if (mSeekBar != null && streamMatch && streamValue != -1) {
                 final boolean muted = mAudioManager.isStreamMute(mStreamType)
                         || streamValue == 0;
