@@ -1992,15 +1992,14 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
             }
         }
 
-        final boolean hasBackdrop = backdropBitmap != null;
-        mKeyguardShowingMedia = hasBackdrop;
-
-<<<<<<< HEAD
         // apply blurred image
         if (backdropBitmap == null) {
             backdropBitmap = mBlurredImage;
             // might still be null
         }
+
+        final boolean hasBackdrop = backdropBitmap != null;
+        mKeyguardShowingMedia = hasBackdrop;
 
         if ((hasBackdrop || DEBUG_MEDIA_FAKE_ARTWORK)
                 && (mState == StatusBarState.KEYGUARD || mState == StatusBarState.SHADE_LOCKED)
