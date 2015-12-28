@@ -5514,7 +5514,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                 }
 
                 // Disable music and volume control when used as wake key
-                if ((result & ACTION_PASS_TO_USER) == 0 && !mVolumeWakeScreen) {
+                if ((result & ACTION_PASS_TO_USER) == 0 && !mVolumeRockerWake) {
                     boolean mayChangeVolume = false;
 
                     if (isMusicActive()) {
