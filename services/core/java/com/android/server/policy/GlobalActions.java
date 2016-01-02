@@ -1346,6 +1346,12 @@ class GlobalActions implements DialogInterface.OnDismissListener, DialogInterfac
         }
     };
 
+    private BroadcastReceiver mThemeChangeReceiver = new BroadcastReceiver() {
+        public void onReceive(Context context, Intent intent) {
+            mUiContext = null;
+        }
+    };
+
     protected void updatePowerMenuActions() {
         ContentResolver resolver = mContext.getContentResolver();
         mActions = Settings.Global.getStringForUser(resolver,
