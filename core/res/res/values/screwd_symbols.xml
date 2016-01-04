@@ -187,5 +187,16 @@
   <java-symbol type="style" name="PowerMenuBottomAnimation" />
   <java-symbol type="style" name="PowerMenuTopAnimation" />
   <java-symbol type="style" name="PowerMenuRotateAnimation" />
+  
+  <!-- Theme install failure notification -->
+  <java-symbol type="string" name="theme_install_error_title" />
+  <java-symbol type="string" name="theme_install_error_message" />
+
+  <!-- Theme reset notification -->
+  <java-symbol type="string" name="theme_reset_notification_title" />
+  <java-symbol type="string" name="theme_reset_notification_body" />
+
+  <!-- Non-themeable packages -->
+  <java-symbol type="array" name="non_themeable_packages" />
 
 </resources>
