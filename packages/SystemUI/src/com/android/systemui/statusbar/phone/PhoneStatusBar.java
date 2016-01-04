@@ -994,8 +994,10 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
             // no window manager? good luck with that
         }
 		
-		addAppCircleSidebar();
-        addGestureAnywhereView();
+		if (!mRecreating) {
+            addGestureAnywhereView();
+            addAppCircleSidebar();
+        }
 
         mNavigationBarView.setDisabledFlags(mDisabled1);
         mNavigationBarView.setBar(this);
