@@ -119,14 +119,10 @@ import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 import com.android.internal.R;
 import com.android.internal.statusbar.IStatusBarService;
-<<<<<<< HEAD
 import com.android.internal.util.screwd.DevUtils;
 import com.android.internal.util.screwd.DimensionConverter;
-=======
-import com.android.internal.util.benzo.DimensionConverter;
 import com.android.internal.util.gesture.EdgeGesturePosition;
 import com.android.internal.util.gesture.EdgeServiceConstants;
->>>>>>> a952c4e... PhoneWindowManager: add ability to use EdgeGestureService for system gestures.
 import com.android.internal.util.ScreenShapeHelper;
 import com.android.internal.widget.PointerLocationView;
 import com.android.server.GestureLauncherService;
