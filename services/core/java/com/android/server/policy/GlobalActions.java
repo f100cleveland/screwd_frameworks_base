@@ -190,7 +190,7 @@ class GlobalActions implements DialogInterface.OnDismissListener, DialogInterfac
     public void showDialog(boolean keyguardShowing, boolean isDeviceProvisioned) {
         mKeyguardShowing = keyguardShowing;
         mDeviceProvisioned = isDeviceProvisioned;
-        if (mDialog != null) {
+        if (mDialog != null && mUiContext == null) {
             mDialog.dismiss();
             mDialog = null;
             mDialog = createDialog();
@@ -970,7 +970,7 @@ class GlobalActions implements DialogInterface.OnDismissListener, DialogInterfac
         public View getView(int position, View convertView, ViewGroup parent) {
             Action action = getItem(position);
             final Context context = getUiContext();
-            return action.create(context, convertView, parent, LayoutInflater.from(mContext));
+            return action.create(context, convertView, parent, LayoutInflater.from(context));
         }
     }
 
