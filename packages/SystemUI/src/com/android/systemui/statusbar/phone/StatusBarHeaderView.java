@@ -85,6 +85,8 @@ import java.text.NumberFormat;
 public class StatusBarHeaderView extends RelativeLayout implements View.OnClickListener,
         NextAlarmController.NextAlarmChangeCallback, EmergencyListener, WeatherController.Callback,
 		StatusBarHeaderMachine.IStatusBarHeaderMachineObserver {
+    
+	static final String TAG = "StatusBarHeaderView";
 
     private boolean mExpanded;
     private boolean mListening;

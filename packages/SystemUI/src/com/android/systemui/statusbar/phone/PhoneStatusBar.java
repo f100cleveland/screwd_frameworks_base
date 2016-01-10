@@ -2058,10 +2058,6 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                     + " metaDataChanged=" + metaDataChanged
                     + " state=" + mState);
         }
-		
-		if (mMediaMetadata != null && (Settings.System.getIntForUser(mContext.getContentResolver(),
-            Settings.System.LOCKSCREEN_MEDIA_METADATA, 1, UserHandle.USER_CURRENT) == 1)) {
-
         Bitmap backdropBitmap = null;
 
         // apply any album artwork first
