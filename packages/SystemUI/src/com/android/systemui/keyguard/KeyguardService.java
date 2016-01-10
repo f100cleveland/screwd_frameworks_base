@@ -189,6 +189,7 @@ public class KeyguardService extends Service {
 
         @Override
         public void setBackgroundBitmap(Bitmap bmp) {
+			checkPermission();
             mKeyguardViewMediator.setBackgroundBitmap(bmp);
         }
     };
