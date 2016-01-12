@@ -2204,12 +2204,6 @@ public final class Settings {
         public static final int ADVANCED_SETTINGS_DEFAULT = 0;
 
         /**
-         * Navigation controls to Use
-         * @hide
-         */
-        public static final String NAV_BUTTONS = "nav_buttons";
-
-        /**
          * @deprecated Use {@link android.provider.Settings.Global#AIRPLANE_MODE_ON} instead
          */
         @Deprecated
@@ -4206,19 +4200,6 @@ public final class Settings {
          * @hide
          */
         public static final String DISABLE_TRANSITION_ANIMATIONS = "disable_transition_animations";
-
-        /**
-         * boolean value. toggles using arrow key locations on nav bar
-         * as left and right dpad keys
-         * @hide
-         */
-        public static final String NAVIGATION_BAR_MENU_ARROW_KEYS = "navigation_bar_menu_arrow_keys";
-		
-		/**
-         * Navigation bar button color
-         * @hide
-         */
-        public static final String NAVIGATION_BAR_TINT = "navigation_bar_tint";
 
         /**
          * Colors used for the color picker panel puttons

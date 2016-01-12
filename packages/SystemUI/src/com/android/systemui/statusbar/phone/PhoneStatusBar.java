@@ -1448,8 +1448,14 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
     private void prepareNavigationBarView() {
         mNavigationBarView.reorient();
 
-        mNavigationBarView.setListeners(mRecentsClickListener, mRecentsPreloadOnTouchListener,
-                mLongPressBackRecentsListener, mHomeActionListener, mLongPressHomeListener);
+        mNavigationBarView.getRecentsButton().setOnClickListener(mRecentsClickListener);
+        mNavigationBarView.getRecentsButton().setOnTouchListener(mRecentsPreloadOnTouchListener);
+        mNavigationBarView.getRecentsButton().setLongClickable(true);
+        mNavigationBarView.getRecentsButton().setOnLongClickListener(mLongPressBackRecentsListener);
+        mNavigationBarView.getBackButton().setLongClickable(true);
+        mNavigationBarView.getBackButton().setOnLongClickListener(mLongPressBackRecentsListener);
+        mNavigationBarView.getHomeButton().setOnTouchListener(mHomeActionListener);
+        mNavigationBarView.getHomeButton().setOnLongClickListener(mLongPressHomeListener);
         mAssistManager.onConfigurationChanged();
     }
 
@@ -3528,10 +3534,6 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         resetUserSetupObserver();
         setControllerUsers();
         mAssistManager.onUserSwitched(newUserId);
-
-        if (mNavigationBarView != null) {
-            mNavigationBarView.updateSettings();
-        }
     }
 
     private void setControllerUsers() {
@@ -3903,8 +3905,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
 
     @Override
     public boolean shouldDisableNavbarGestures() {
-        return !isDeviceProvisioned() || (mDisabled1 & StatusBarManager.DISABLE_SEARCH) != 0
-                || (mNavigationBarView != null && mNavigationBarView.isInEditMode());
+        return !isDeviceProvisioned() || (mDisabled1 & StatusBarManager.DISABLE_SEARCH) != 0;
     }
 
     public void postStartActivityDismissingKeyguard(final PendingIntent intent) {
@@ -4698,21 +4699,21 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                     activityManager.stopLockTaskModeOnCurrent();
                     // When exiting refresh disabled flags.
                     mNavigationBarView.setDisabledFlags(mDisabled1, true);
-                } else if (NavbarEditor.NAVBAR_BACK.equals(v.getTag())
+                } else if ((v.getId() == R.id.back)
                         && !mNavigationBarView.getRecentsButton().isPressed()) {
                     // If we aren't pressing recents right now then they presses
                     // won't be together, so send the standard long-press action.
                     sendBackLongPress = true;
-                } else if (NavbarEditor.NAVBAR_RECENT.equals(v.getTag())
+                } else if ((v.getId() == R.id.recent_apps))
                          && !activityManager.isInLockTaskMode()) {
                     hijackRecentsLongPress = true;
                 }
                 mLastLockToAppLongPress = time;
             } else {
                 // If this is back still need to handle sending the long-press event.
-                if (NavbarEditor.NAVBAR_BACK.equals(v.getTag())) {
+                if (v.getId() == R.id.back) {
                     sendBackLongPress = true;
-                } else if (NavbarEditor.NAVBAR_RECENT.equals(v.getTag())
+                } else if (v.getId() == R.id.recent_apps)
                          && !activityManager.isInLockTaskMode()) {
                     hijackRecentsLongPress = true;
                 } else if (isAccessiblityEnabled && activityManager.isInLockTaskMode()) {
