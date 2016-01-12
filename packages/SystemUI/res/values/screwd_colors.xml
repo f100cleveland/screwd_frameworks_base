@@ -135,5 +135,8 @@
     
     <!-- Navigation bar -->
     <color name="navigationbar_button_default_color">#FFFFFFFF</color>
+    
+    <!-- Active color for volume slider -->
+    <color name="volume_slider_active">@color/system_accent_color</color>
 
 </resources>
