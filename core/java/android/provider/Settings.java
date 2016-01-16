@@ -4268,12 +4268,6 @@ public final class Settings {
         public static final String SHOW_ALARM_FULLSCREEN = "show_alarm_fullscreen";
 		
 		/**
-		 * Whether to display recents in full screen
-         * @hide
-         */
-        public static final String RECENTS_FULL_SCREEN = "recents_full_screen";
-		
-		/**
 		 * Boolean value whether to link ringtone and notification volume
          * @hide
          */
@@ -4740,6 +4734,16 @@ public final class Settings {
          * @hide
          */
         public static final String KEYGUARD_TOGGLE_TORCH = "keyguard_toggle_torch";
+		
+		/**
+		 * Immersive recents options
+         * 0 = Default AOSP look
+         * 1 = Statusbar only
+         * 2 = Navbar only
+         * 3 = Fullscreen
+         * @hide
+         */
+        public static final String IMMERSIVE_RECENTS = "immersive_recents";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
