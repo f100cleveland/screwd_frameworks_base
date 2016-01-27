@@ -318,5 +318,9 @@
     <string name="message_keep_one_launcher">Should keep at least one home activity!</string>
     
     <string name="toast_airplane_mode_hotspot">Disable airplane mode before enabling</string>
+    
+    <!-- Notification which notifies user flashlight is enabled -->
+    <string name="quick_settings_tile_flashlight_not_title">Flashlight is on</string>
+    <string name="quick_settings_tile_flashlight_not_summary">Tap to turn off</string>
 
 </resources>
