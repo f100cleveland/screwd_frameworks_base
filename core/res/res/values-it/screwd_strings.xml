@@ -20,6 +20,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_killed_message">Applicazione terminata </string>
+  <string name="permlab_setKeyguardWallpaper">imposta lo sfondo della schermata di blocco</string>
+  <string name="permdesc_setKeyguardWallpaper">Consente ad un\'app di cambiare lo sfondo della schermata di blocco.</string>
   <string name="global_action_reboot">Riavvia</string>
   <string name="reboot_reboot">Riavvia</string>
   <string name="reboot_recovery">Recovery</string>
@@ -28,14 +30,13 @@
   <string name="reboot_soft">Riavvio rapido</string>
   <string name="reboot_systemui">Riavvia SystemUI</string>
   <string name="global_action_screenshot">Screenshot</string>
+  <string name="global_action_screenrecord">Registra schermo</string>
   <string name="global_action_current_user">Attuale</string>
   <string name="default_string">Predefinito</string>
   <string name="reboot_title">Riavvia</string>
   <string name="reboot_confirm" product="tablet">Il tuo tablet verrà riavviato.</string>
   <string name="reboot_confirm" product="default">Il telefono verrà riavviato.</string>
   <string name="reboot_progress">Riavvio\u2026</string>
-  <string name="permlab_setKeyguardWallpaper">imposta lo sfondo della schermata di blocco</string>
-  <string name="permdesc_setKeyguardWallpaper">Consente ad un\'app di cambiare lo sfondo della schermata di blocco.</string>
   <string name="permlab_preventpower">Sovrascrivi il tasto di accensione</string>
   <string name="permdesc_preventpower">Consenti ad un app di annullare il tasto di accensione.</string>
   <string name="animation_fade">Dissolvenza</string>
@@ -60,4 +61,15 @@
   <string name="permdesc_readPhoneBlacklist">Consente ad un\'app di leggere informazioni riguardo i numeri di telefono bloccati per le chiamate in arrivo o i messaggi.</string>
   <string name="permlab_changePhoneBlacklist">modifica la lista nera del telefono</string>
   <string name="permdesc_changePhoneBlacklist">Permette ad un\'app di cambiare i numeri di telefono bloccati per le chiamate in arrivo o per i messaggi.</string>
+  <string name="global_action_onthego">Modalità On-The-Go</string>
+  <string name="permlab_accessThemeService">accedi al servizio temi</string>
+  <string name="permdesc_accessThemeService">Consente all\'applicazione di accedere al servizio temi. Non dovrebbe mai essere necessario per le normali applicazioni.</string>
+  <string name="permlab_readThemes">leggi le informazioni del tema</string>
+  <string name="permdesc_readThemesDesc">Consente all\'applicazione di leggere i vostri temi e       determinare quale tema avete applicato.</string>
+  <string name="permlab_writeThemes">modifica i tuoi temi</string>
+  <string name="permdesc_writeThemesDesc">Consente all\'applicazione di inserire nuovi temi e       modificare quale tema avete applicato.</string>
+  <string name="theme_install_error_title">Impossibile installare il tema</string>
+  <string name="theme_install_error_message">%s Impossibile installare</string>
+  <string name="theme_reset_notification_title">Reset del tema</string>
+  <string name="theme_reset_notification_body">Tema di sistema ripristinato a causa di molteplici blocchi dell\'applicazione.</string>
 </resources>
