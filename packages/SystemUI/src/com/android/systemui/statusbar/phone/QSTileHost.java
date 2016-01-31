@@ -57,6 +57,7 @@ import com.android.systemui.qs.tiles.ScreenOffTile;
 import com.android.systemui.qs.tiles.ScreenshotTile;
 import com.android.systemui.qs.tiles.ScreenTimeoutTile;
 import com.android.systemui.qs.tiles.SyncTile;
+import com.android.systemui.qs.tiles.ThemesTile;
 import com.android.systemui.qs.tiles.NavBarTile;
 import com.android.systemui.qs.tiles.VolumeTile;
 import com.android.systemui.qs.tiles.WifiTile;
@@ -324,6 +325,8 @@ public class QSTileHost implements QSTile.Host {
                 return new AmbientDisplayTile(this);
             case QSConstants.TILE_SCREENSHOT:
                 return new ScreenshotTile(this);
+	    case QSConstants.TILE_THEMES:
+                return new ThemesTile(this);	
             default:
                 throw new IllegalArgumentException("Bad tile spec: " + tileSpec);
         }
