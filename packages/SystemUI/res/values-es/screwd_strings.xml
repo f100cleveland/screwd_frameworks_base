@@ -43,7 +43,6 @@
   <string name="lockscreen_choose_action_title">Elegir una acción</string>
   <string name="lockscreen_none_target">Ninguno</string>
   <string name="accessibility_data_connection_HP">HSPA+</string>
-  <string name="pie_date_format">cCC, dd MMM AAAA</string>
   <string name="pie_hour_format_12">hh:mm</string>
   <string name="pie_hour_format_24">HH:mm</string>
   <string name="pie_am_pm">a</string>

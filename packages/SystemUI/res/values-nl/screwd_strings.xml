@@ -84,7 +84,6 @@
   <string name="lockscreen_choose_action_title">Actie selecteren</string>
   <string name="lockscreen_none_target">Geen</string>
   <string name="accessibility_data_connection_HP">HSPA+</string>
-  <string name="pie_date_format">ccc, dd MMM jjjj</string>
   <string name="pie_hour_format_12">uu:mm</string>
   <string name="pie_hour_format_24">HH:mm</string>
   <string name="pie_am_pm">a</string>
