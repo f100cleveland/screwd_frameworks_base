@@ -4883,6 +4883,18 @@ public final class Settings {
          * @hide
          */
         public static final String HEADS_UP_WHITELIST_VALUES = "heads_up_whitelist_values";
+		
+		/**
+         * Hide lockscreen date
+         * @hide
+         */
+        public static final String HIDE_LOCKSCREEN_DATE  = "hide_lockscreen_date";
+		
+		/**
+         * Hide lockscreen clock
+         * @hide
+         */
+        public static final String HIDE_LOCKSCREEN_CLOCK = "hide_lockscreen_clock";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
