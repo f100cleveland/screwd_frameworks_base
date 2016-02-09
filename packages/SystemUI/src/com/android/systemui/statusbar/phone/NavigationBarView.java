@@ -141,7 +141,7 @@ public class NavigationBarView extends LinearLayout {
     int mDisabledFlags = 0;
     int mNavigationIconHints = 0;
 
-    private BackButtonDrawable mBackIcon, mBackLandIcon;
+    private Drawable mBackIcon, mBackLandIcon, mBackAltIcon, mBackAltLandIcon;
     private Drawable mRecentIcon;
     private Drawable mRecentLandIcon;
     private Drawable mHomeIcon, mHomeLandIcon;
@@ -314,6 +314,8 @@ public class NavigationBarView extends LinearLayout {
         mShowMenu = false;
         mTaskSwitchHelper = new NavigationBarViewTaskSwitchHelper(context);
 
+        getIcons(res);
+
         mBarTransitions = new NavigationBarTransitions(this);
 
         mSettingsObserver = new SettingsObserver(new Handler());
@@ -330,9 +332,6 @@ public class NavigationBarView extends LinearLayout {
 
         mButtonsConfig = ActionHelper.getNavBarConfig(mContext);
         mButtonIdList = new ArrayList<Integer>();
-
-        getIcons(res);
-
     }
 
     @Override
@@ -447,41 +446,12 @@ public class NavigationBarView extends LinearLayout {
     }
 
     private void getIcons(Resources res) {
-        Drawable backIcon, backIconLand;
-        ActionConfig actionConfig;
-        String backIconUri = ActionConstants.ICON_EMPTY;
-        for (int j = 0; j < mButtonsConfig.size(); j++) {
-            actionConfig = mButtonsConfig.get(j);
-            final String action = actionConfig.getClickAction();
-            if (action.equals(ActionConstants.ACTION_BACK)) {
-                backIconUri = actionConfig.getIcon();
-            }
-        }
-
-        backIcon = ActionHelper.getActionIconImage(mContext,
-                ActionConstants.ACTION_BACK, backIconUri);
-        backIconLand = backIcon;
-
-        boolean shouldColor = true;
-        if (backIconUri != null && !backIconUri.equals(ActionConstants.ICON_EMPTY)
-                && !backIconUri.startsWith(ActionConstants.SYSTEM_ICON_IDENTIFIER)
-                && mNavBarButtonColorMode == 1) {
-            shouldColor = false;
-        }
-
-        // update back buttons color
-        if (shouldColor && mNavBarButtonColorMode != 3) {
-            backIcon.mutate();
-            backIcon.setTintMode(PorterDuff.Mode.MULTIPLY);
-            backIcon.setTint(mNavBarButtonColor);
-
-            backIconLand.mutate();
-            backIconLand.setTintMode(PorterDuff.Mode.MULTIPLY);
-            backIconLand.setTint(mNavBarButtonColor);
-        }
-
-        mBackIcon     = new BackButtonDrawable(backIcon);
-        mBackLandIcon = new BackButtonDrawable(backIconLand);
+        mBackIcon = res.getDrawable(R.drawable.ic_sysbar_back);
+        mBackLandIcon = mBackIcon;
+        mBackAltIcon = res.getDrawable(R.drawable.ic_sysbar_back_ime);
+        mBackAltLandIcon = mBackAltIcon;
+        mRecentIcon = res.getDrawable(R.drawable.ic_sysbar_recent);
+		mRecentLandIcon = mRecentIcon;
     }
 
     public void updateResources(Resources res) {
@@ -667,7 +637,8 @@ public class NavigationBarView extends LinearLayout {
 
         if (d != null) {
             d.mutate();
-            if (colorize && mNavBarButtonColorMode != 3) {
+            if (colorize && mNavBarButtonColorMode != 3
+                    && !clickAction.equals(ActionConstants.ACTION_BACK)) {
                 d = ImageHelper.getColoredDrawable(d, mNavBarButtonColor);
             }
             v.setImageBitmap(ImageHelper.drawableToBitmap(d));
@@ -804,11 +775,14 @@ public class NavigationBarView extends LinearLayout {
             ((ImageView) getBackButton()).setImageDrawable(null);
             ((ImageView) getBackButton()).setImageDrawable(mVertical ? mBackLandIcon : mBackIcon);
         }
-        mBackLandIcon.setImeVisible(backAlt);
-        mBackIcon.setImeVisible(backAlt);
 
-        mIsImeButtonVisible = ((hints & StatusBarManager.NAVIGATION_HINT_IME_SHOWN) != 0
+        final boolean showImeButton = ((hints & StatusBarManager.NAVIGATION_HINT_IME_SHOWN) != 0
                     && !mImeArrowVisibility);
+        if (getImeSwitchButton() != null) {
+            getImeSwitchButton().setVisibility(showImeButton ? View.VISIBLE : View.GONE);
+            mIsImeButtonVisible = showImeButton;
+        }
+
         mIsImeArrowVisible = (backAlt && mImeArrowVisibility);
         getLeftImeArrowButton().setVisibility(mIsImeArrowVisible ? View.VISIBLE : View.GONE);
         getRightImeArrowButton().setVisibility(mIsImeArrowVisible ? View.VISIBLE : View.GONE);
@@ -837,7 +811,7 @@ public class NavigationBarView extends LinearLayout {
             setSlippery(disableHome && disableRecent && disableBack);
         }
 
-        final ViewGroup navButtons = getNavButtons();
+        ViewGroup navButtons = (ViewGroup) mCurrentView.findViewById(R.id.nav_buttons);
         if (navButtons != null) {
             LayoutTransition lt = navButtons.getLayoutTransition();
             if (lt != null) {
@@ -1002,11 +976,9 @@ public class NavigationBarView extends LinearLayout {
 
         if (getImeSwitchButton() != null)
             getImeSwitchButton().setOnClickListener(mImeSwitcherClickListener);
-		
-		final ViewGroup navButtons = getNavButtons();	
         if (mDimNavButtons) {
-            if (navButtons != null)
-                navButtons.setOnTouchListener(mNavButtonsTouchListener);
+            if (getNavButtons() != null)
+                getNavButtons().setOnTouchListener(mNavButtonsTouchListener);
         }
 
         updateRTLOrder();
@@ -1039,11 +1011,9 @@ public class NavigationBarView extends LinearLayout {
 
         if (getImeSwitchButton() != null)
             getImeSwitchButton().setOnClickListener(mImeSwitcherClickListener);
-			
-		final ViewGroup navButtons = getNavButtons();	
         if (mDimNavButtons) {
-            if (navButtons != null)
-                navButtons.setOnTouchListener(mNavButtonsTouchListener);
+            if (getNavButtons() != null)
+                getNavButtons().setOnTouchListener(mNavButtonsTouchListener);
         }
 
         mDeadZone = (DeadZone) mCurrentView.findViewById(R.id.deadzone);
@@ -1256,18 +1226,61 @@ public class NavigationBarView extends LinearLayout {
                 Settings.System.MENU_VISIBILITY, MENU_VISIBILITY_SYSTEM,
                 UserHandle.USER_CURRENT);
 
-        getIcons(getContext().getResources());
-
         mImeArrowVisibility = (Settings.System.getIntForUser(resolver,
                 Settings.System.STATUS_BAR_IME_ARROWS, HIDE_IME_ARROW,
                 UserHandle.USER_CURRENT) == SHOW_IME_ARROW);
 
         setNavigationIconHints(mNavigationIconHints, true);
 
+        // update back button colors
+        Drawable backIcon, backIconLand;
+        ActionConfig actionConfig;
+        String backIconUri = ActionConstants.ICON_EMPTY;
+        for (int j = 0; j < mButtonsConfig.size(); j++) {
+            actionConfig = mButtonsConfig.get(j);
+            final String action = actionConfig.getClickAction();
+            if (action.equals(ActionConstants.ACTION_BACK)) {
+                backIconUri = actionConfig.getIcon();
+            }
+        }
+
+        if (backIconUri.equals(ActionConstants.ICON_EMPTY)) {
+            backIcon = mContext.getResources().getDrawable(
+                    R.drawable.ic_sysbar_back);
+            backIconLand = backIcon;
+        } else {
+            backIcon = ActionHelper.getActionIconImage(mContext,
+                    ActionConstants.ACTION_BACK, backIconUri);
+            backIconLand = backIcon;
+        }
+        boolean shouldColor = true;
+        if (backIconUri != null && !backIconUri.equals(ActionConstants.ICON_EMPTY)
+                && !backIconUri.startsWith(ActionConstants.SYSTEM_ICON_IDENTIFIER)
+                && mNavBarButtonColorMode == 1) {
+            shouldColor = false;
+        }
+
+        updateBackButtonDrawables(backIcon, backIconLand, shouldColor);
+
         // construct the navigationbar
         if (recreate) {
             makeBar();
         }
+
+    }
+
+    private void updateBackButtonDrawables(
+            Drawable iconBack, Drawable iconBackLand, boolean color) {
+        iconBack.mutate();
+        iconBackLand.mutate();
+        iconBack.setTintMode(PorterDuff.Mode.MULTIPLY);
+        iconBackLand.setTintMode(PorterDuff.Mode.MULTIPLY);
+        if (color && mNavBarButtonColorMode != 3) {
+            iconBack.setTint(mNavBarButtonColor);
+            iconBackLand.setTint(mNavBarButtonColor);
+		}
+        mBackIcon = iconBack;
+        mBackLandIcon = iconBackLand;
     }
 
     public void dump(FileDescriptor fd, PrintWriter pw, String[] args) {
