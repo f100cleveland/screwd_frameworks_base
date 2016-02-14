@@ -295,6 +295,8 @@ public class QSPanel extends ViewGroup {
     }
 
     public void refreshAllTiles() {
+        mUseMainTiles = Settings.Secure.getIntForUser(getContext().getContentResolver(),
+                Settings.Secure.QS_USE_MAIN_TILES, 1, UserHandle.USER_CURRENT) == 1;
         for (int i = 0; i < mRecords.size(); i++) {
             TileRecord r = mRecords.get(i);
             r.tileView.setDual(mUseMainTiles && i < 2);
@@ -746,9 +748,6 @@ public class QSPanel extends ViewGroup {
 
         void observe() {
             ContentResolver resolver = mContext.getContentResolver();
-            resolver.registerContentObserver(Settings.Secure.getUriFor(
-                    Settings.Secure.QS_USE_MAIN_TILES),
-                    false, this, UserHandle.USER_ALL);
             update();
         }
 
@@ -770,9 +769,6 @@ public class QSPanel extends ViewGroup {
 
         public void update() {
             ContentResolver resolver = mContext.getContentResolver();
-            mUseMainTiles = Settings.Secure.getIntForUser(
-            mContext.getContentResolver(), Settings.Secure.QS_USE_MAIN_TILES,
-                1, UserHandle.USER_CURRENT) == 1;
         }
     }
 }
