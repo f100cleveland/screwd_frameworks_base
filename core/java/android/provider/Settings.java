@@ -7506,31 +7506,6 @@ public final class Settings {
          * @hide
          */
 
-        /**
-         * Whether detail view for the location tile is enabled
-         * @hide
-         */
-        public static final String QS_LOCATION_ADVANCED = "qs_location_advanced";
-
-        /**
-         * List of QS tile names
-         * @hide
-         */
-        public static final String QS_TILES = "sysui_qs_tiles";
-
-        /**
-         * Whether to show four tiles per row.
-         * @hide
-         */
-        public static final String QS_USE_FOUR_COLUMNS = "qs_use_four_columns";
-
-        /**
-         * Use "main" tiles on the first row of the quick settings panel
-         * 0 = no, 1 = yes
-         * @hide
-         */
-        public static final String QS_USE_MAIN_TILES = "sysui_qs_main_tiles";
-
 
         /**
          * The TCP/IP port to run ADB on, or -1 for USB

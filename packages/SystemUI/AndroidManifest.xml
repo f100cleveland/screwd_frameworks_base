@@ -84,10 +84,6 @@
     <uses-permission android:name="android.permission.MANAGE_ACTIVITY_STACKS" />
     <uses-permission android:name="android.permission.START_TASKS_FROM_RECENTS" />
 
-    <!-- Reboot -->
-    <uses-permission android:name="android.permission.REBOOT" />
-    <uses-permission android:name="android.permission.RECOVERY" />
-
     <!-- WindowManager -->
     <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
@@ -102,10 +98,6 @@
 
     <!-- Alarm clocks -->
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
-    
-    <!-- Sync tile -->
-    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
-    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
 
     <!-- Keyguard -->
     <uses-permission android:name="android.permission.CONTROL_KEYGUARD" />
@@ -153,11 +145,6 @@
 
     <!-- Weather -->
     <uses-permission android:name="com.cyanogenmod.lockclock.permission.READ_WEATHER" />
-
-    <!-- Themes tile -->
-    <uses-permission android:name="android.permission.ACCESS_THEME_MANAGER" />
-    <uses-permission android:name="android.permission.READ_THEMES" />
-    <uses-permission android:name="android.permission.WRITE_THEMES" />
 
     <application
         android:name=".SystemUIApplication"
