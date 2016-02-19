@@ -595,6 +595,14 @@ final class DefaultPermissionGrantPolicy {
             if (chromiumPackageSaber != null) {
                 grantRuntimePermissionsLPw(chromiumPackageSaber, CONTACTS_PERMISSIONS, userId);
             }
+            
+            // cLock
+            PackageParser.Package cLockPackage = getDefaultProviderAuthorityPackageLPr(
+                    "com.cyanogenmod.lockclock", userId);
+            if (cLockPackage != null) {
+                grantRuntimePermissionsLPw(cLockPackage, CALENDAR_PERMISSIONS, userId);
+		grantRuntimePermissionsLPw(cLockPackage, LOCATION_PERMISSIONS, userId);
+            }
 
             // Google Account
             PackageParser.Package googleaccountPackage = getDefaultProviderAuthorityPackageLPr(
