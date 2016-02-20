@@ -4919,6 +4919,12 @@ public final class Settings {
          * @hide
          */
         public static final String STATUS_BAR_SCREWD_LOGO_COLOR = "status_bar_screwd_logo_color";
+		
+		/**
+		 *  Enable flashlight notification
+         * @hide
+         */
+        public static final String FLASHLIGHT_NOTIFICATION = "flashlight_notification";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
