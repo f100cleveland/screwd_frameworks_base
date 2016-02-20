@@ -57,6 +57,7 @@ import android.graphics.PorterDuff.Mode;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.inputmethodservice.InputMethodService;
 import android.net.Uri;
@@ -403,6 +404,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
     private boolean mScrewdLogo;
     private int mScrewdLogoColor;
     private ImageView screwdLogo;
+    AnimationDrawable screwdAnimation;
 
     private int mNavigationBarWindowState = WINDOW_STATE_SHOWING;
 
@@ -3680,9 +3682,11 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         if (mStatusBarView == null) return;
         ContentResolver resolver = mContext.getContentResolver();
         screwdLogo = (ImageView) mStatusBarView.findViewById(R.id.screwd_logo);
+	screwdAnimation = (AnimationDrawable) screwdLogo.getDrawable();
         screwdLogo.setColorFilter(color, Mode.SRC_IN);
         if (screwdLogo != null) {
             screwdLogo.setVisibility(show ? (mScrewdLogo ? View.VISIBLE : View.GONE) : View.GONE);
+	    screwdAnimation.start();
         }
     }
 
