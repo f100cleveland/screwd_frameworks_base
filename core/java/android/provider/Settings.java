@@ -4925,6 +4925,12 @@ public final class Settings {
          * @hide
          */
         public static final String FLASHLIGHT_NOTIFICATION = "flashlight_notification";
+		
+		/**		
+		 * Options to decide wether or not to show keyguard bouncer on secure lockscreen
+         * @hide
+         */
+        public static final String LOCKSCREEN_BOUNCER = "lockscreen_bouncer";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings

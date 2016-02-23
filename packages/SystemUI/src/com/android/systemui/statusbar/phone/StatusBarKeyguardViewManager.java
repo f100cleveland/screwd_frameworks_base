@@ -22,6 +22,8 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.os.Trace;
+import android.os.UserHandle;
+import android.provider.Settings;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,6 +81,8 @@ public class StatusBarKeyguardViewManager {
     private OnDismissAction mAfterKeyguardGoneAction;
     private boolean mDeviceWillWakeUp;
     private boolean mDeferScrimFadeOut;
+    private boolean mBackPress;
+    private boolean mShowKgBouncer;
 
     public StatusBarKeyguardViewManager(Context context, ViewMediatorCallback callback,
             LockPatternUtils lockPatternUtils) {
@@ -117,6 +121,12 @@ public class StatusBarKeyguardViewManager {
      * {@link KeyguardBouncer#needsFullscreenBouncer()}.
      */
     private void showBouncerOrKeyguard() {
+        int bouncerview = Settings.Secure.getIntForUser(mContext.getContentResolver(), 
+                Settings.Secure.LOCKSCREEN_BOUNCER, 0, UserHandle.USER_CURRENT);
+        mShowKgBouncer = !mBackPress && mLockPatternUtils.isSecure(UserHandle.getCallingUserId()) && (bouncerview == 1 
+                || (bouncerview == 2 && !mPhoneStatusBar.hasActiveClearableNotifications()) 
+                || (bouncerview == 3 && !mPhoneStatusBar.hasActiveVisibleNotifications()) 
+                || (bouncerview == 4 && !mPhoneStatusBar.hasActiveClearableNotifications() && !mPhoneStatusBar.hasActiveVisibleNotifications()));
         if (mBouncer.needsFullscreenBouncer()) {
 
             // The keyguard might be showing (already). So we need to hide it.
@@ -126,6 +136,9 @@ public class StatusBarKeyguardViewManager {
             mPhoneStatusBar.showKeyguard();
             mBouncer.hide(false /* destroyView */);
             mBouncer.prepare();
+        }
+        if (mShowKgBouncer) {
+            mBouncer.show(true);
         }
     }
 
@@ -184,6 +197,7 @@ public class StatusBarKeyguardViewManager {
 
     public void onScreenTurningOn() {
         mPhoneStatusBar.onScreenTurningOn();
+        reset();
     }
 
     public boolean isScreenTurnedOn() {
@@ -203,6 +217,7 @@ public class StatusBarKeyguardViewManager {
 
     public void onScreenTurnedOff() {
         mScreenTurnedOn = false;
+        mBackPress = false;
     }
 
     public void notifyDeviceWakeUpRequested() {
@@ -397,6 +412,7 @@ public class StatusBarKeyguardViewManager {
     public boolean onBackPressed() {
         if (mBouncer.isShowing()) {
             mPhoneStatusBar.endAffordanceLaunch();
+            mBackPress = true;
             reset();
             return true;
         }
