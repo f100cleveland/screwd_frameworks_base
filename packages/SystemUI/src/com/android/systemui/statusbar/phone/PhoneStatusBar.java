@@ -401,9 +401,10 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
     boolean mExpandedVisible;
 
     // Screwd logo
-    private boolean mScrewdLogo;
+    private int mScrewdLogo;
     private int mScrewdLogoColor;
-    private ImageView screwdLogo;
+    private ImageView screwdLogo_static;
+    private ImageView screwdLogo_anim;
     AnimationDrawable screwdAnimation;
 
     private int mNavigationBarWindowState = WINDOW_STATE_SHOWING;
@@ -635,8 +636,8 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
             mBlurRadius = Settings.System.getInt(resolver,
                     Settings.System.LOCKSCREEN_BLUR_RADIUS, 14);
 					
-			mScrewdLogo = Settings.System.getIntForUser(resolver,
-                    Settings.System.STATUS_BAR_SCREWD_LOGO, 0, mCurrentUserId) == 1;
+	    mScrewdLogo = Settings.System.getIntForUser(resolver,
+                    Settings.System.STATUS_BAR_SCREWD_LOGO, 0, UserHandle.USER_CURRENT);
             mScrewdLogoColor = Settings.System.getIntForUser(resolver,
                     Settings.System.STATUS_BAR_SCREWD_LOGO_COLOR, 0xFFFFFFFF, mCurrentUserId);
             showScrewdLogo(mScrewdLogo, mScrewdLogoColor);
@@ -3678,16 +3679,29 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         }
     };
 
-    public void showScrewdLogo(boolean show, int color) {
+    public void showScrewdLogo(int show, int color) {
         if (mStatusBarView == null) return;
         ContentResolver resolver = mContext.getContentResolver();
-        screwdLogo = (ImageView) mStatusBarView.findViewById(R.id.screwd_logo);
-	screwdAnimation = (AnimationDrawable) screwdLogo.getDrawable();
-        screwdLogo.setColorFilter(color, Mode.SRC_IN);
-        if (screwdLogo != null) {
-            screwdLogo.setVisibility(show ? (mScrewdLogo ? View.VISIBLE : View.GONE) : View.GONE);
+        screwdLogo_static = (ImageView) mStatusBarView.findViewById(R.id.screwd_logo_static);
+	screwdLogo_anim = (ImageView) mStatusBarView.findViewById(R.id.screwd_logo_anim);
+	screwdAnimation = (AnimationDrawable) screwdLogo_anim.getDrawable();
+        screwdLogo_static.setColorFilter(color, Mode.SRC_IN);
+	screwdLogo_anim.setColorFilter(color, Mode.SRC_IN);
+
+        if (screwdLogo_static != null && screwdLogo_anim != null && mScrewdLogo == 1) {
+            screwdLogo_static.setVisibility(View.VISIBLE);
+	    screwdLogo_anim.setVisibility(View.GONE);
 	    screwdAnimation.start();
+        } else if (screwdLogo_anim != null && screwdLogo_static !=null && mScrewdLogo == 2) {
+            screwdLogo_static.setVisibility(View.GONE);
+	    screwdLogo_anim.setVisibility(View.VISIBLE);
+	    screwdAnimation.start(); //start the animation
+	} else if (screwdLogo_anim != null && screwdLogo_static !=null && mScrewdLogo == 0) {
+            //user has disabled, make em both be gone!
+	    screwdLogo_anim.setVisibility(View.GONE);
+	    screwdLogo_static.setVisibility(View.GONE);	
         }
+	
     }
 
     private void resetUserExpandedStates() {
