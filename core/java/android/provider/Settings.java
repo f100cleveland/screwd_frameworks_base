@@ -4926,11 +4926,17 @@ public final class Settings {
          */
         public static final String FLASHLIGHT_NOTIFICATION = "flashlight_notification";
 		
-		/**		
-		 * Options to decide wether or not to show keyguard bouncer on secure lockscreen
+		/**
+		 * change lockscreen alpha color
          * @hide
          */
-        public static final String LOCKSCREEN_BOUNCER = "lockscreen_bouncer";
+        public static final String LOCKSCREEN_ALPHA = "lockscreen_alpha";
+
+        /**
+         * change lockscreen security alpha color
+         * @hide
+         */
+        public static final String LOCKSCREEN_SECURITY_ALPHA = "lockscreen_security_alpha";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
@@ -6185,6 +6191,12 @@ public final class Settings {
          * @hide
          */
         public static final String LOCKSCREEN_TARGETS = "lockscreen_target_actions";
+		
+		/**		
+		 * Options to decide wether or not to show keyguard bouncer on secure lockscreen
+         * @hide
+         */
+        public static final String LOCKSCREEN_BOUNCER = "lockscreen_bouncer";
 
         /**
          * Comma-separated list of location providers that activities may access. Do not rely on
