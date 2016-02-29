@@ -15,67 +15,190 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Content description of the location tile in quick settings when on, battery saving mode (not shown on the screen). [CHAR LIMIT=NONE] -->
   <string name="accessibility_quick_settings_location_battery_saving">Locatie rapportage: Accubesparing.</string>
+  <!-- Content description of the location tile in quick settings when on, sensors only mode (not shown on the screen). [CHAR LIMIT=NONE] -->
   <string name="accessibility_quick_settings_location_gps_only">Locatie rapportage: Alleen apparaat.</string>
+  <!-- Content description of the location tile in quick settings when on, high accuracy mode (not shown on the screen). [CHAR LIMIT=NONE] -->
   <string name="accessibility_quick_settings_location_high_accuracy">Locatie rapportage: Grote nauwkeurigheid.</string>
+  <!-- Content description of the network adb tile in quick settings when off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_network_adb_off">ADB via netwerk uit.</string>
+  <!-- Content description of the network adb tile in quick settings when on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_network_adb_on">ADB via netwerk aan.</string>
+  <!-- Announcement made when network adb changes to off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_network_adb_changed_off">ADB via netwerk uitgeschakeld.</string>
+  <!-- Announcement made when network adb changes to on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_network_adb_changed_on">ADB via netwerk ingeschakeld.</string>
+  <!-- Content description of the compass tile in quick settings when off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_compass_off">Kompas uit.</string>
+  <!-- Content description of the compass tile in quick settings when on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_compass_on">Kompas aan.</string>
+  <!-- Announcement made when compass changes to off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_compass_changed_off">Kompas uitgeschakeld.</string>
+  <!-- Announcement made when compass changes to on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_compass_changed_on">Kompas ingeschakeld.</string>
+  <!-- Announcement made when the location tile changes to battery saving (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_location_changed_battery_saving">Locatie rapportage gewijzigd in accubesparingsmodus.</string>
+  <!-- Announcement made when the location tile changes to sensors only (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_location_changed_gps_only">Locatie rapportage gewijzigd in alleen-sensorsmodus.</string>
+  <!-- Announcement made when the location tile changes to high accuracy (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_location_changed_high_accuracy">Locatie rapportage gewijzigd in hoge nauwkeurigheidsmodus.</string>
+  <!-- Content description of the NFC tile in quick settings when off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_nfc_off">NFC uit.</string>
+  <!-- Content description of the NFC tile in quick settings when on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_nfc_on">NFC aan.</string>
+  <!-- Announcement made when NFC changes to off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_nfc_changed_off">NFC uitgeschakeld.</string>
+  <!-- Announcement made when NFC changes to on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_nfc_changed_on">NFC ingeschakeld.</string>
+  <!-- Content description of the screen timeout tile in quick settings (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_screen_timeout">Scherm timeout: <xliff:g id="timeout" example="30 seconds">%s </xliff:g>.</string>
+  <!-- Announcement made when the screen timeout tile changes (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_screen_timeout_changed">Scherm timeout gewijzigd in <xliff:g id="timeout" example="30 seconds">%s </xliff:g>.</string>
+  <!-- Content description of the sync tile in quick settings when off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_sync_off">Sync uit.</string>
+  <!-- Content description of the sync tile in quick settings when on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_sync_on">Sync aan.</string>
+  <!-- Announcement made when sync changes to off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_sync_changed_off">Sync uitgeschakeld.</string>
+  <!-- Announcement made when sync changes to on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_sync_changed_on">Sync ingeschakeld.</string>
+  <!-- Content description of the battery saver tile in quick settings when off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_battery_saver_off">Accubesparing uit.</string>
+  <!-- Content description of the battery saver tile in quick settings when on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_battery_saver_on">Accubesparing aan.</string>
+  <!-- Announcement made when battery saver changes to off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_battery_saver_changed_off">Accubesparing uitgeschakeld.</string>
+  <!-- Announcement made when battery saver changes to on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_battery_saver_changed_on">Accubesparing ingeschakeld.</string>
+  <!-- QuickSettings: Location detail panel title [CHAR LIMIT=NONE] -->
+  <string name="quick_settings_location_detail_title">Locatie modus</string>
+  <!-- QuickSettings: Location (On, low-power) [CHAR LIMIT=NONE] -->
+  <string name="quick_settings_location_battery_saving_label">Accubesparing</string>
+  <!-- QuickSettings: Location (On, gps-only) [CHAR LIMIT=NONE] -->
+  <string name="quick_settings_location_gps_only_label">Alleen apparaat</string>
+  <!-- QuickSettings: Location (On, high-accuracy) [CHAR LIMIT=NONE] -->
+  <string name="quick_settings_location_high_accuracy_label">Grote nauwkeurigheid</string>
+  <string name="quick_settings_navbar_label">NavBar</string>
+  <string name="quick_settings_navbar_on">NavBar aan</string>
+  <string name="quick_settings_navbar_off">NavBar uit</string>
+  <string name="gestures_message">Teken hier uw gesture</string>
+  <!-- Text to use when the number in a notification info is too large
+         (greater than status_bar_notification_info_maxnum, defined in
+         values/config.xml) and must be truncated.
+         [CHAR LIMIT=4] -->
+  <!-- Battery level for expanded quick settings [CHAR LIMIT=2] -->
+  <string name="battery_level_template"><xliff:g id="level" example="45">%d </xliff:g>%%</string>
+  <!-- The text for the button in the notification window-shade that clears
+         all of the currently visible notifications. [CHAR LIMIT=10]-->
+  <string name="clear_recents">Sluit alle recents</string>
+  <!-- Battery Saver Dimss -->
+  <string name="battery_saver_dismiss_title">Annuleren</string>
+  <string name="battery_saver_notification_action_text_short">Uitschakelen</string>
+  <!-- Screenshot Delete Toast -->
+  <string name="delete_screenshot_toast">Schermafbeelding verwijderd</string>
+  <!-- ADB over network Tile -->
+  <string name="quick_settings_adb_network">ADB netwerk</string>
+  <string name="quick_settings_network_adb_enabled_label">Ingeschakeld</string>
+  <string name="quick_settings_network_adb_disabled_label">Uitgeschaleld</string>
   <string name="accessibility_quick_settings_network_adb_off">ADB via netwerk uit.</string>
   <string name="accessibility_quick_settings_network_adb_on">ADB via netwerk aan.</string>
   <string name="accessibility_quick_settings_network_adb_changed_off">ADB via netwerk uitgeschakeld.</string>
   <string name="accessibility_quick_settings_network_adb_changed_on">ADB via netwerk ingeschakeld.</string>
-  <string name="accessibility_quick_settings_ambient_display_off">Omgevingsdisplay uit.</string>
-  <string name="accessibility_quick_settings_ambient_display_on">Omgevingsdisplay aan.</string>
-  <string name="accessibility_quick_settings_ambient_display_changed_off">Omgevimgsdisplay uitgeschakeld.</string>
-  <string name="accessibility_quick_settings_ambient_display_changed_on">Omgevingsdisplay ingeschakeld.</string>
-  <string name="accessibility_quick_settings_compass_off">Kompas uit.</string>
-  <string name="accessibility_quick_settings_compass_on">Kompas aan.</string>
-  <string name="accessibility_quick_settings_compass_changed_off">Kompas uitgeschakeld.</string>
-  <string name="accessibility_quick_settings_compass_changed_on">Kompas ingeschakeld.</string>
-  <string name="accessibility_quick_settings_location_changed_battery_saving">Locatie rapportage gewijzigd in accubesparingsmodus.</string>
-  <string name="accessibility_quick_settings_location_changed_gps_only">Locatie rapportage gewijzigd in alleen-sensorsmodus.</string>
-  <string name="accessibility_quick_settings_location_changed_high_accuracy">Locatie rapportage gewijzigd in hoge nauwkeurigheidsmodus.</string>
-  <string name="accessibility_quick_settings_nfc_off">NFC uit.</string>
-  <string name="accessibility_quick_settings_nfc_on">NFC aan.</string>
-  <string name="accessibility_quick_settings_nfc_changed_off">NFC uitgeschakeld.</string>
-  <string name="accessibility_quick_settings_nfc_changed_on">NFC ingeschakeld.</string>
-  <string name="accessibility_quick_settings_screen_timeout">Scherm timeout: <xliff:g id="timeout" example="30 seconds">%s </xliff:g>.</string>
-  <string name="accessibility_quick_settings_screen_timeout_changed">Scherm timeout gewijzigd in <xliff:g id="timeout" example="30 seconds">%s </xliff:g>.</string>
-  <string name="accessibility_quick_settings_sync_off">Sync uit.</string>
-  <string name="accessibility_quick_settings_sync_on">Sync aan.</string>
-  <string name="accessibility_quick_settings_sync_changed_off">Sync uitgeschakeld.</string>
-  <string name="accessibility_quick_settings_sync_changed_on">Sync ingeschakeld.</string>
+  <!-- Ambient Display QS tile -->
+  <string name="accessibility_quick_settings_ambient_display_off">Omgevingsdisplay uit</string>
+  <string name="accessibility_quick_settings_ambient_display_on">Omgevingsdisplay aan</string>
+  <string name="accessibility_quick_settings_ambient_display_changed_off">Omgevingsdisplay ingeschakeld</string>
+  <string name="accessibility_quick_settings_ambient_display_changed_on">Omgevingsdisplay ingeschakeld</string>
+  <string name="quick_settings_ambient_display_label">Omgevingsdisplay</string>
+  <!-- Battery Saver QS Tile -->
+  <string name="quick_settings_battery_saver">Accubesparing</string>
   <string name="accessibility_quick_settings_battery_saver_off">Accubesparing uit.</string>
   <string name="accessibility_quick_settings_battery_saver_on">Accubesparing aan.</string>
   <string name="accessibility_quick_settings_battery_saver_changed_off">Accubesparing uitgeschakeld.</string>
   <string name="accessibility_quick_settings_battery_saver_changed_on">Accubesparing ingeschakeld.</string>
-  <string name="accessibility_quick_settings_volume_panel">Volumepaneel.</string>
-  <string name="quick_settings_location_detail_title">Locatie modus</string>
-  <string name="quick_settings_location_battery_saving_label">Accubesparing</string>
-  <string name="quick_settings_location_gps_only_label">Alleen apparaat</string>
-  <string name="quick_settings_location_high_accuracy_label">Grote nauwkeurigheid</string>
-  <string name="quick_settings_nfc_label">NFC</string>
-  <string name="quick_settings_brightness">Helderheid</string>
+  <!-- Compass QS Tile -->
   <string name="quick_settings_compass_label">Kompas</string>
   <string name="quick_settings_compass_init">Initialiseren\2060</string>
-  <string name="quick_settings_network_adb_label">ADB over het netwerk</string>
-  <string name="quick_settings_volume_panel_label">Volumepaneel</string>
-  <string name="quick_settings_screen_timeout_detail_title">Scherm time-out</string>
-  <string name="quick_settings_ambient_display_label">Omgevingsdisplay</string>
-  <string name="quick_settings_sync_label">Sync</string>
-  <string name="quick_settings_battery_saver_label">Accubesparing</string>
+  <string name="accessibility_quick_settings_compass_off">Kompas uit.</string>
+  <string name="accessibility_quick_settings_compass_on">Kompas aan.</string>
+  <string name="accessibility_quick_settings_compass_changed_off">Kompas uitgeschakeld.</string>
+  <string name="accessibility_quick_settings_compass_changed_on">Kompas ingeschakeld.</string>
+  <!-- Brightness QS Tile -->
+  <string name="quick_settings_brightness">Helderheid</string>
+  <!-- Expanded Desktop QS Tile -->
   <string name="quick_settings_expanded_desktop">Uitgebreid</string>
   <string name="quick_settings_expanded_desktop_off">Normaal</string>
-  <string name="quick_settings_screen_off">Scherm uit</string>
-  <string name="quick_settings_screenshot">Schermafbeelding</string>
-  <string name="quick_settings_reboot_label">Opnieuw opstarten</string>
+  <!-- Heads Up QS Tile -->
+  <string name="quick_settings_heads_up_label">Heads-up</string>
+  <string name="accessibility_quick_settings_heads_up_off">Heads-up Uit.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Heads-up Aan.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Heads-up Uitgeschakeld.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Heads-up Ingeschakeld.</string>
+  <!-- IME selector Tile -->
+  <string name="quick_settings_ime_label">IME</string>
+  <!-- Lockscreen QS Tile -->
+  <string name="quick_settings_lockscreen_label">Vergrendelscherm</string>
+  <string name="quick_settings_lockscreen_label_enforced">Vergrendelscherm afgedwongen</string>
+  <!-- Content description of the lock screen tile in quick settings when off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_lock_screen_off">Vergrendelscherm uit.</string>
+  <!-- Content description of the lock screen tile in quick settings when on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_lock_screen_on">Vergrendelscherm aan.</string>
+  <!-- Announcement made when lock screen changes to off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_lock_screen_changed_off">Vergrendelscherm uitgeschakeld.</string>
+  <!-- Announcement made when lock screen changes to on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_lock_screen_changed_on">Vergrendelscherm ingeschakeld.</string>
+  <!-- Music QS Tile -->
+  <string name="quick_settings_music_label">Muziek</string>
+  <string name="quick_settings_music_play">Play</string>
+  <string name="quick_settings_music_pause">Pauze</string>
+  <!-- NFC QS tile -->
+  <string name="quick_settings_nfc_label">NFC</string>
+  <!-- Pie tile -->
+  <string name="quick_settings_pie_label">Pie</string>
+  <!-- Reboot/Recovery QS Tile -->
+  <string name="quick_settings_reboot_label">Herstarten</string>
   <string name="quick_settings_reboot_recovery_label">Recovery</string>
-  <string name="gestures_message">Teken hier uw gesture</string>
-  <string name="battery_level_template"><xliff:g id="level" example="45">%d </xliff:g>%%</string>
-  <string name="clear_recents">Sluit alle recents</string>
-  <string name="battery_saver_dismiss_title">Annuleren</string>
-  <string name="battery_saver_notification_action_text_short">Uitschakelen</string>
-  <string name="delete_screenshot_toast">Schermafbeelding verwijderd</string>
+  <!-- Screenshot QS tile -->
+  <string name="quick_settings_screenshot_label">Schermafbeelding</string>
+  <!-- Screen off QS tile -->
+  <string name="quick_settings_screen_off">Scherm uit</string>
+  <!-- Screen timeout QS tile -->
+  <string name="quick_settings_timeout_label">Time-out</string>
+  <string name="quick_settings_screen_timeout_detail_title">Scherm time-out</string>
+  <string name="accessibility_quick_settings_screen_timeout">Scherm timeout: <xliff:g id="timeout" example="30 seconds">%s </xliff:g>.</string>
+  <string name="accessibility_quick_settings_screen_timeout_changed">Scherm timeout gewijzigd in <xliff:g id="timeout" example="30 seconds">%s </xliff:g>.</string>
+  <!-- Sound QS Tile -->
+  <string name="quick_settings_sound_label">Geluid</string>
+  <string name="quick_settings_sound_ring">Ring</string>
+  <string name="quick_settings_sound_vibrate">Trillen</string>
+  <string name="quick_settings_sound_silent">Stil</string>
+  <!-- Sync QS tile -->
+  <string name="quick_settings_sync_label">Sync</string>
+  <string name="accessibility_quick_settings_sync_off">Sync uit.</string>
+  <string name="accessibility_quick_settings_sync_on">Sync aan.</string>
+  <string name="accessibility_quick_settings_sync_changed_off">Sync uitgeschakeld.</string>
+  <string name="accessibility_quick_settings_sync_changed_on">Sync ingeschakeld.</string>
+  <!-- Themes QS Tile -->
+  <string name="quick_settings_themes">Themes</string>
+  <string name="quick_settings_themes_icon_packs">Icon packs</string>
+  <string name="quick_settings_themes_app_theme">App theme</string>
+  <string name="quick_settings_themes_system_theme">Systeem theme</string>
+  <string name="quick_settings_themes_default_theme">Standaard</string>
+  <string name="quick_settings_themes_match_system">Gelijk aan systeem theme</string>
+  <!-- USB tether QS tile -->
+  <string name="accessibility_quick_settings_usb_tether_off">USB tethering uit</string>
+  <string name="accessibility_quick_settings_usb_tether_on">USB tethering aan</string>
+  <string name="accessibility_quick_settings_usb_tether_changed_off">USB tethering uitgeschakeld</string>
+  <string name="accessibility_quick_settings_usb_tether_changed_on">USB tethering ingeschakeld</string>
+  <string name="quick_settings_usb_tether_label">USB-tethering</string>
+  <!-- Volume QS Tile -->
+  <string name="accessibility_quick_settings_volume_panel">Volumepaneel.</string>
+  <string name="quick_settings_volume_panel_label">Volumepaneel</string>
+  <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_expanded_header_weather_format"><xliff:g id="temp">%1$s </xliff:g> - <xliff:g id="condition">%2$s </xliff:g></string>
-  <string name="weather_info_not_available">Weer informatie niet beschikbaar</string>
+  <string name="weather_info_not_available">Weerinfo niet beschikbaar.</string>
+  <!-- Strings for lockscreen shortcut hints -->
   <string name="left_shortcut_hint">Swipe rechts voor %1$s</string>
   <string name="right_shortcut_hint">Swipe links voor %1$s</string>
   <string name="lockscreen_message">Tik op een icon links of rechts om een vergrendelscherm snelkoppeling tot te wijzen.</string>
@@ -83,17 +206,22 @@
   <string name="select_application">App selecteren</string>
   <string name="lockscreen_choose_action_title">Actie selecteren</string>
   <string name="lockscreen_none_target">Geen</string>
+  <!-- Content description of the data connection type HSPA+ for accessibility (not shown on the screen). [CHAR LIMIT=NONE] -->
   <string name="accessibility_data_connection_HP">HSPA+</string>
-  <string name="pie_hour_format_12">uu:mm</string>
-  <string name="pie_hour_format_24">HH:mm</string>
-  <string name="pie_am_pm">a</string>
+  <!-- Kill app toast -->
   <string name="app_killed_message">App beëindigd</string>
+  <!-- Screenrecord Notification Ticker -->
   <string name="screenrecord_notif_ticker">Scherm wordt opgenomen</string>
+  <!-- Screenrecord notification title -->
   <string name="screenrecord_notif_title">Scherm opnemen</string>
+  <!-- Screenrecord notification action: Stop -->
   <string name="screenrecord_notif_stop">Stop</string>
+  <!-- Screenrecord notification action: show/hide pointer -->
   <string name="screenrecord_notif_pointer_on">Aanwijzer weergeven</string>
   <string name="screenrecord_notif_pointer_off">Aanwijzer verbergen</string>
+  <!-- Screen record notification error title -->
   <string name="screenrecord_notif_error">Scherm opname mislukt</string>
+  <!-- On The Go -->
   <string name="onthego_notif_ticker">On-The-Go geactiveerd</string>
   <string name="onthego_notif_title">On-The-Go is actief</string>
   <string name="onthego_notif_stop">Stop</string>
@@ -104,12 +232,26 @@
   <string name="onthego_transparency">Transparantie</string>
   <string name="onthego_front_camera">Gebruik front camera</string>
   <string name="onthego_service_toggle">Service automatisch herstarten</string>
+  <!-- To do: Add QS OnTheGo
+    <string name="quick_settings_onthego_back">Rear Camera</string>
+    <string name="quick_settings_onthego_front">Front Camera</string>-->
+  <!-- App circle sidebar -->
   <string name="app_float_maximize_item_title">Maximaliseren</string>
   <string name="app_float_item_title">Float weergave</string>
   <string name="app_stop_item_title">Sluit app</string>
+  <!-- SystemUI Tuner Parts -->
   <string name="systemui_tuner_statusbar_title">Statusbalk Items</string>
   <string name="systemui_tuner_qs_title">Quick Settings</string>
+  <!-- Screenshot -->
   <string name="shortcut_screenshot">Schermafbeelding</string>
-  <string name="quick_settings_navbar_on">NavBar aan</string>
-  <string name="quick_settings_navbar_off">NavBar uit</string>
+  <!-- Task Manager -->
+  <string name="task_manager_title">Taakbeheer</string>
+  <string name="message_switch_fail">Kan niet naar deze taak overschakelen, want deze heeft geen interface.</string>
+  <string name="tasklist_killall">Kill alles</string>
+  <string name="tasklist_memory_usage">"Vrij/totaal geheugen: <xliff:g id="number">%s </xliff:g> / <xliff:g id="name"> %s </xliff:g>"</string>
+  <string name="message_keep_one_launcher">Moet minstens één home activiteit behouden!</string>
+  <string name="toast_airplane_mode_hotspot">Schakel vliegtuigmodus uit voor inschakelen</string>
+  <!-- Notification which notifies user flashlight is enabled -->
+  <string name="quick_settings_tile_flashlight_not_title">Zaklamp is aan</string>
+  <string name="quick_settings_tile_flashlight_not_summary">Tik om uit te schakelen</string>
 </resources>

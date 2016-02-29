@@ -19,21 +19,62 @@
 */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- kill app long press back -->
   <string name="app_killed_message">Applikation dödad </string>
+  <!-- Title of an application permission, listed so the user can choose whether they want the application to do this. -->
+  <string name="permlab_setKeyguardWallpaper">ställ in låsskärmens bakgrund</string>
+  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_setKeyguardWallpaper">Tillåt en app att ändra låsskärmens bakgrundsbild.</string>
+  <!-- label for item that reboots the phone in phone options dialog -->
   <string name="global_action_reboot">Omstart</string>
+  <!-- Button to reboot the phone, within the Reboot Options dialog -->
   <string name="reboot_reboot">Omstart</string>
+  <!-- Button to reboot the phone into recovery, within the Reboot Options dialog -->
+  <string name="reboot_recovery">Recovery</string>
+  <!-- Button to reboot the phone into bootloader, within the Reboot Options dialog -->
+  <string name="reboot_bootloader">Bootloader</string>
+  <!-- Button to reboot the phone into download, within the Reboot Options dialog -->
   <string name="reboot_download">Ladda ner</string>
+  <!-- Button to soft reboot the device, within the Reboot Options dialog -->
   <string name="reboot_soft">Mjuk omstart</string>
+  <!-- Button to soft reboot the device, within the Reboot Options dialog -->
   <string name="reboot_systemui">Starta om SystemUI</string>
+  <!-- label for item that screenshots in phone options dialog -->
   <string name="global_action_screenshot">Skärmdump</string>
+  <string name="global_action_screenrecord">Skärm inspelning</string>
   <string name="global_action_current_user">Nuvarande</string>
+  <!-- Slimseekbar -->
+  <string name="default_string">Standardinställning</string>
+  <!-- Title of dialog to confirm rebooting. -->
   <string name="reboot_title">Omstart</string>
+  <!-- Reboot Confirmation Dialog.  When the user chooses to reboot the device, there will
+         be a confirmation dialog.  This is the message. -->
   <string name="reboot_confirm" product="tablet">Din surfplatta startas om.</string>
   <string name="reboot_confirm" product="default">Din telefon startas om.</string>
+  <!-- Reboot Progress Dialog. This is shown if the user chooses to reboot the phone. -->
   <string name="reboot_progress">Startar om\u2026</string>
+  <string name="permlab_preventpower">åsidosätt strömknappen</string>
+  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_preventpower">Ger en app rättighet att åsidosätta strömknappen.</string>
+  <!-- AOKP custom system animations -->
   <string name="animation_default">Standardinställning</string>
   <string name="action_null">Tom</string>
+  <!-- Vendor mismatched fingerprint warning [CHAR LIMIT=NONE] -->
+  <!-- Title of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permgrouplab_security">Säkerhet</string>
+  <!-- Description of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
+  <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <!-- label for item that takes On-The-Go in the phone options dialog -->
+  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <!-- Theme installation error notification -->
+  <string name="theme_reset_notification_title">Återställ tema</string>
+  <!-- Zen mode buttons -->
 </resources>

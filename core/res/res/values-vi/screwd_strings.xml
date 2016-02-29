@@ -19,25 +19,44 @@
 */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- kill app long press back -->
   <string name="app_killed_message">Application killed </string>
+  <!-- Title of an application permission, listed so the user can choose whether they want the application to do this. -->
   <string name="permlab_setKeyguardWallpaper">Đặt hình nền màn hình khóa</string>
+  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_setKeyguardWallpaper">Cho phép một ứng dụng được thay đổi hình nền màn hình khóa.</string>
+  <!-- label for item that reboots the phone in phone options dialog -->
   <string name="global_action_reboot">Khởi động lại</string>
+  <!-- Button to reboot the phone, within the Reboot Options dialog -->
   <string name="reboot_reboot">Khởi động lại</string>
+  <!-- Button to reboot the phone into recovery, within the Reboot Options dialog -->
   <string name="reboot_recovery">Khởi động vào recovery</string>
+  <!-- Button to reboot the phone into bootloader, within the Reboot Options dialog -->
   <string name="reboot_bootloader">Khởi động vào bootloader</string>
+  <!-- Button to reboot the phone into download, within the Reboot Options dialog -->
   <string name="reboot_download">Khởi động vào download</string>
+  <!-- Button to soft reboot the device, within the Reboot Options dialog -->
   <string name="reboot_soft">Khởi động lại mềm</string>
+  <!-- Button to soft reboot the device, within the Reboot Options dialog -->
   <string name="reboot_systemui">Khởi động lại giao diện hệ thống</string>
+  <!-- label for item that screenshots in phone options dialog -->
   <string name="global_action_screenshot">Chụp màn hình</string>
+  <string name="global_action_screenrecord">Ghi lại màn hình</string>
   <string name="global_action_current_user">Hiện hành</string>
+  <!-- Slimseekbar -->
   <string name="default_string">Mặc định</string>
+  <!-- Title of dialog to confirm rebooting. -->
   <string name="reboot_title">Khởi động lại</string>
+  <!-- Reboot Confirmation Dialog.  When the user chooses to reboot the device, there will
+         be a confirmation dialog.  This is the message. -->
   <string name="reboot_confirm" product="tablet">Máy tính bảng của bạn sẽ khởi động lại.</string>
   <string name="reboot_confirm" product="default">Điện thoại của bạn sẽ khởi động lại.</string>
+  <!-- Reboot Progress Dialog. This is shown if the user chooses to reboot the phone. -->
   <string name="reboot_progress">Đang khởi động lại\u2026</string>
   <string name="permlab_preventpower">ghi đè lên phím nguồn</string>
+  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_preventpower">Cho phép một ứng dụng được ghi đè lên phím nguồn.</string>
+  <!-- AOKP custom system animations -->
   <string name="animation_fade">Mờ dần</string>
   <string name="animation_slide_right">Trượt sang phải</string>
   <string name="animation_slide_left">Trượt sang trái</string>
@@ -53,11 +72,38 @@
   <string name="animation_grow_shrink_left">Lớn dần (Ở bên trái)</string>
   <string name="animation_grow_shrink_right">Lớn dần (Ở bên phải)</string>
   <string name="action_null">Trống (Không có hiệu ứng nào)</string>
+  <!-- Vendor mismatched fingerprint warning [CHAR LIMIT=NONE] -->
   <string name="system_error_vendorprint">Dường như hình ảnh nhà cung cấp của bạn có thể hết hạn. Xin vui lòng flash hình ảnh nhà cung cấp mới nhất cho thiết bị của bạn.</string>
+  <!-- Title of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permgrouplab_security">Bảo mật</string>
+  <!-- Description of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permgroupdesc_security">Cấp phép liên quan đến thiết bị bảo mật thông tin.</string>
+  <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permlab_readPhoneBlacklist">đọc danh sách đen điện thoại</string>
+  <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_readPhoneBlacklist">Cho phép một ứng dụng đọc thông tin về số điện thoại bị chặn cho đến các cuộc gọi hoặc tin nhắn.</string>
+  <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permlab_changePhoneBlacklist">thay đổi danh sách đen điện thoại</string>
+  <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_changePhoneBlacklist">Cho phép một ứng dụng để thay đổi số điện thoại bị chặn cho đến các cuộc gọi hoặc tin nhắn.</string>
+  <!-- label for item that takes On-The-Go in the phone options dialog -->
+  <string name="global_action_onthego">Chế độ on-The-Go</string>
+  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permlab_accessThemeService">truy cập dịch vụ chủ đề</string>
+  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permdesc_accessThemeService">Cho phép một ứng dụng để truy cập vào dịch vụ chủ đề. Nên không bao giờ cần thiết cho các ứng dụng bình thường.</string>
+  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permlab_readThemes">đọc thông tin chủ đề của bạn</string>
+  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permdesc_readThemesDesc">Cho phép các ứng dụng để đọc chủ đề của bạn và xác định chủ đề mà bạn đã áp dụng.</string>
+  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permlab_writeThemes">sửa đổi chủ đề của bạn</string>
+  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permdesc_writeThemesDesc">Cho phép các ứng dụng để chèn chủ đề mới và sửa đổi các chủ đề mà bạn đã áp dụng.</string>
+  <!-- Theme installation error notification -->
+  <string name="theme_install_error_title">Không cài đặt được chủ đề</string>
+  <string name="theme_install_error_message">%s không thể cài đặt</string>
+  <string name="theme_reset_notification_title">Đặt lại chủ đề</string>
+  <string name="theme_reset_notification_body">Hệ thống chủ đề phục hồi do nhiều ứng dụng đổ vỡ.</string>
+  <!-- Zen mode buttons -->
 </resources>

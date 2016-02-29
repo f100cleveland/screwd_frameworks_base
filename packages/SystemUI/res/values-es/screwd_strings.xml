@@ -15,26 +15,190 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Content description of the location tile in quick settings when on, battery saving mode (not shown on the screen). [CHAR LIMIT=NONE] -->
   <string name="accessibility_quick_settings_location_battery_saving">Informe de ubicación: modo de ahorro de batería.</string>
+  <!-- Content description of the location tile in quick settings when on, sensors only mode (not shown on the screen). [CHAR LIMIT=NONE] -->
   <string name="accessibility_quick_settings_location_gps_only">Informe de ubicación: Modo solo dispositivo.</string>
+  <!-- Content description of the location tile in quick settings when on, high accuracy mode (not shown on the screen). [CHAR LIMIT=NONE] -->
   <string name="accessibility_quick_settings_location_high_accuracy">Informe de ubicación: modo de alta precisión.</string>
-  <string name="accessibility_quick_settings_volume_panel">Panel de volumen.</string>
+  <!-- Content description of the network adb tile in quick settings when off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_network_adb_off">ADB por red apagado.</string>
+  <!-- Content description of the network adb tile in quick settings when on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_network_adb_on">ADB por red encendido.</string>
+  <!-- Announcement made when network adb changes to off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_network_adb_changed_off">Se ha apagado el ADB por red.</string>
+  <!-- Announcement made when network adb changes to on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_network_adb_changed_on">Se ha encendido el ADB por red.</string>
+  <!-- Content description of the compass tile in quick settings when off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_compass_off">Brújula apagada.</string>
+  <!-- Content description of the compass tile in quick settings when on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_compass_on">Brújula encendida.</string>
+  <!-- Announcement made when compass changes to off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_compass_changed_off">Se ha apagado la brújula.</string>
+  <!-- Announcement made when compass changes to on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_compass_changed_on">Se ha encendido la brújula.</string>
+  <!-- Announcement made when the location tile changes to battery saving (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_location_changed_battery_saving">Informe de ubicación cambiado a modo de ahorro de batería.</string>
+  <!-- Announcement made when the location tile changes to sensors only (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_location_changed_gps_only">Informes de ubicación cambiados a modo solo dispositivo.</string>
+  <!-- Announcement made when the location tile changes to high accuracy (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_location_changed_high_accuracy">Informes de ubicación cambiados a modo alta precisión.</string>
+  <!-- Content description of the NFC tile in quick settings when off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_nfc_off">NFC apagado.</string>
+  <!-- Content description of the NFC tile in quick settings when on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_nfc_on">NFC encendido.</string>
+  <!-- Announcement made when NFC changes to off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_nfc_changed_off">Se ha apagado el NFC.</string>
+  <!-- Announcement made when NFC changes to on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_nfc_changed_on">Se ha encendido el NFC.</string>
+  <!-- Content description of the screen timeout tile in quick settings (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_screen_timeout">Tiempo de apagado de pantalla: <xliff:g id="timeout" example="30 seconds">%s</xliff:g>.</string>
+  <!-- Announcement made when the screen timeout tile changes (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_screen_timeout_changed">Tiempo de apagado de la pantalla cambiado a <xliff:g id="timeout" example="30 segundos">%s</xliff:g>.</string>
+  <!-- Content description of the sync tile in quick settings when off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_sync_off">Sincronización desactivada.</string>
+  <!-- Content description of the sync tile in quick settings when on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_sync_on">Sincronización encendida.</string>
+  <!-- Announcement made when sync changes to off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_sync_changed_off">La sincronización se ha desactivado.</string>
+  <!-- Announcement made when sync changes to on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_sync_changed_on">La sincronización se ha activado.</string>
+  <!-- Content description of the battery saver tile in quick settings when off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_battery_saver_off">Modo ahorro de batería desactivado.</string>
+  <!-- Content description of the battery saver tile in quick settings when on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_battery_saver_on">Modo ahorro de batería encendido.</string>
+  <!-- Announcement made when battery saver changes to off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_battery_saver_changed_off">Se ha desactivado el modo de ahorro de batería.</string>
+  <!-- Announcement made when battery saver changes to on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_battery_saver_changed_on">Se ha activado el modo de ahorro de batería.</string>
+  <!-- QuickSettings: Location detail panel title [CHAR LIMIT=NONE] -->
+  <string name="quick_settings_location_detail_title">Modo de ubicación</string>
+  <!-- QuickSettings: Location (On, low-power) [CHAR LIMIT=NONE] -->
   <string name="quick_settings_location_battery_saving_label">Ahorro de batería</string>
+  <!-- QuickSettings: Location (On, gps-only) [CHAR LIMIT=NONE] -->
+  <string name="quick_settings_location_gps_only_label">Solo dispositivo</string>
+  <!-- QuickSettings: Location (On, high-accuracy) [CHAR LIMIT=NONE] -->
   <string name="quick_settings_location_high_accuracy_label">Alta precisión</string>
-  <string name="quick_settings_nfc_label">NFC</string>
-  <string name="quick_settings_volume_panel_label">Panel de volumen</string>
-  <string name="quick_settings_screen_timeout_detail_title">Tiempo de espera de la pantalla</string>
-  <string name="quick_settings_sync_label">Sincronizar</string>
-  <string name="quick_settings_reboot_label">Reiniciar</string>
-  <string name="quick_settings_reboot_recovery_label">Recovery</string>
+  <string name="quick_settings_navbar_label">Barra de navegación</string>
+  <string name="quick_settings_navbar_on">Activar barra de navegación</string>
+  <string name="quick_settings_navbar_off">Desactivar barra de navegación</string>
   <string name="gestures_message">Dibujar su gesto aquí</string>
+  <!-- Text to use when the number in a notification info is too large
+         (greater than status_bar_notification_info_maxnum, defined in
+         values/config.xml) and must be truncated.
+         [CHAR LIMIT=4] -->
+  <!-- Battery level for expanded quick settings [CHAR LIMIT=2] -->
   <string name="battery_level_template"><xliff:g id="level" example="45">%d</xliff:g>%%</string>
+  <!-- The text for the button in the notification window-shade that clears
+         all of the currently visible notifications. [CHAR LIMIT=10]-->
   <string name="clear_recents">Cerrar todas las recientes</string>
+  <!-- Battery Saver Dimss -->
   <string name="battery_saver_dismiss_title">Ignorar</string>
   <string name="battery_saver_notification_action_text_short">Apagar</string>
+  <!-- Screenshot Delete Toast -->
   <string name="delete_screenshot_toast">Captura de pantalla eliminada</string>
+  <!-- ADB over network Tile -->
+  <string name="quick_settings_adb_network">Red ADB</string>
+  <string name="quick_settings_network_adb_enabled_label">Activada</string>
+  <string name="quick_settings_network_adb_disabled_label">Desactivada</string>
+  <string name="accessibility_quick_settings_network_adb_off">ADB por red apagado.</string>
+  <string name="accessibility_quick_settings_network_adb_on">ADB por red encendido.</string>
+  <string name="accessibility_quick_settings_network_adb_changed_off">Se ha apagado el ADB por red.</string>
+  <string name="accessibility_quick_settings_network_adb_changed_on">Se ha encendido el ADB por red.</string>
+  <!-- Ambient Display QS tile -->
+  <string name="accessibility_quick_settings_ambient_display_off">Pantalla ambiente desactivada</string>
+  <string name="accessibility_quick_settings_ambient_display_on">Pantalla ambiente activada</string>
+  <string name="accessibility_quick_settings_ambient_display_changed_off">Se ha desactivado la pantalla ambiente</string>
+  <string name="accessibility_quick_settings_ambient_display_changed_on">Se ha activado la pantalla ambiente</string>
+  <string name="quick_settings_ambient_display_label">Pantalla ambiente</string>
+  <!-- Battery Saver QS Tile -->
+  <string name="quick_settings_battery_saver">Ahorro de batería</string>
+  <string name="accessibility_quick_settings_battery_saver_off">Modo ahorro de batería desactivado.</string>
+  <string name="accessibility_quick_settings_battery_saver_on">Modo ahorro de batería encendido.</string>
+  <string name="accessibility_quick_settings_battery_saver_changed_off">Se ha desactivado el modo de ahorro de batería.</string>
+  <string name="accessibility_quick_settings_battery_saver_changed_on">Se ha activado el modo de ahorro de batería.</string>
+  <!-- Compass QS Tile -->
+  <string name="quick_settings_compass_label">Brújula</string>
+  <string name="quick_settings_compass_init">Iniciando\u2026</string>
+  <string name="accessibility_quick_settings_compass_off">Brújula apagada.</string>
+  <string name="accessibility_quick_settings_compass_on">Brújula encendida.</string>
+  <string name="accessibility_quick_settings_compass_changed_off">Se ha apagado la brújula.</string>
+  <string name="accessibility_quick_settings_compass_changed_on">Se ha encendido la brújula.</string>
+  <!-- Brightness QS Tile -->
+  <string name="quick_settings_brightness">Brillo</string>
+  <!-- Expanded Desktop QS Tile -->
+  <string name="quick_settings_expanded_desktop">Expandido</string>
+  <string name="quick_settings_expanded_desktop_off">Normal</string>
+  <!-- Heads Up QS Tile -->
+  <string name="quick_settings_heads_up_label">Notificaciones Flotantes</string>
+  <string name="accessibility_quick_settings_heads_up_off">Notificación Flotante Apagada.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Notificación flotante encendida.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Notificaciones flotantes apagadas.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Notificaciones flotantes encendidas.</string>
+  <!-- IME selector Tile -->
+  <string name="quick_settings_ime_label">IME</string>
+  <!-- Lockscreen QS Tile -->
+  <string name="quick_settings_lockscreen_label">Bloquear pantalla</string>
+  <string name="quick_settings_lockscreen_label_enforced">Pantalla de bloqueo aplicada</string>
+  <!-- Content description of the lock screen tile in quick settings when off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_lock_screen_off">Bloqueo de pantalla apagado.</string>
+  <!-- Content description of the lock screen tile in quick settings when on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_lock_screen_on">Pantalla de bloqueo encendido.</string>
+  <!-- Announcement made when lock screen changes to off (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_lock_screen_changed_off">Pantalla de bloqueo apagada.</string>
+  <!-- Announcement made when lock screen changes to on (not shown on the screen). [CHAR LIMIT=NONE] -->
+  <string name="accessibility_quick_settings_lock_screen_changed_on">Pantalla de bloqueo activa.</string>
+  <!-- Music QS Tile -->
+  <string name="quick_settings_music_label">Música</string>
+  <string name="quick_settings_music_play">Reproducir</string>
+  <string name="quick_settings_music_pause">Pausa</string>
+  <!-- NFC QS tile -->
+  <string name="quick_settings_nfc_label">NFC</string>
+  <!-- Pie tile -->
+  <string name="quick_settings_pie_label">Pie</string>
+  <!-- Reboot/Recovery QS Tile -->
+  <string name="quick_settings_reboot_label">Reiniciar</string>
+  <string name="quick_settings_reboot_recovery_label">Recovery</string>
+  <!-- Screenshot QS tile -->
+  <string name="quick_settings_screenshot_label">Captura de pantalla</string>
+  <!-- Screen off QS tile -->
+  <string name="quick_settings_screen_off">Apagar pantalla</string>
+  <!-- Screen timeout QS tile -->
+  <string name="quick_settings_timeout_label">Tiempo de espera agotado</string>
+  <string name="quick_settings_screen_timeout_detail_title">Tiempo de espera de la pantalla</string>
+  <string name="accessibility_quick_settings_screen_timeout">Tiempo de apagado de pantalla: <xliff:g id="timeout" example="30 seconds">%s</xliff:g>.</string>
+  <string name="accessibility_quick_settings_screen_timeout_changed">Tiempo de apagado de la pantalla cambiado a <xliff:g id="timeout" example="30 segundos">%s</xliff:g>.</string>
+  <!-- Sound QS Tile -->
+  <string name="quick_settings_sound_label">Sonido</string>
+  <string name="quick_settings_sound_ring">Timbre</string>
+  <string name="quick_settings_sound_vibrate">Vibración</string>
+  <string name="quick_settings_sound_silent">Silencio</string>
+  <!-- Sync QS tile -->
+  <string name="quick_settings_sync_label">Sincronizar</string>
+  <string name="accessibility_quick_settings_sync_off">Sincronización desactivada.</string>
+  <string name="accessibility_quick_settings_sync_on">Sincronización encendida.</string>
+  <string name="accessibility_quick_settings_sync_changed_off">La sincronización se ha desactivado.</string>
+  <string name="accessibility_quick_settings_sync_changed_on">La sincronización se ha activado.</string>
+  <!-- Themes QS Tile -->
+  <string name="quick_settings_themes">Temas</string>
+  <string name="quick_settings_themes_icon_packs">Paquetes de iconos</string>
+  <string name="quick_settings_themes_app_theme">Tema de la aplicación</string>
+  <string name="quick_settings_themes_system_theme">Tema de sistema</string>
+  <string name="quick_settings_themes_default_theme">Por defecto</string>
+  <string name="quick_settings_themes_match_system">Tema de sistema de partido</string>
+  <!-- USB tether QS tile -->
+  <string name="accessibility_quick_settings_usb_tether_off">USB tethering apagar</string>
+  <string name="accessibility_quick_settings_usb_tether_on">USB tethering encender</string>
+  <string name="accessibility_quick_settings_usb_tether_changed_off">USB tethering desactivado</string>
+  <string name="accessibility_quick_settings_usb_tether_changed_on">USB tethering activado</string>
+  <string name="quick_settings_usb_tether_label">Anclaje de USB</string>
+  <!-- Volume QS Tile -->
+  <string name="accessibility_quick_settings_volume_panel">Panel de volumen.</string>
+  <string name="quick_settings_volume_panel_label">Panel de volumen</string>
+  <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_expanded_header_weather_format"><xliff:g id="temp">%1$s</xliff:g> - <xliff:g id="condition">%2$s</xliff:g></string>
-  <string name="weather_info_not_available">Información meteorológica no disponible</string>
+  <string name="weather_info_not_available">Información meteorológica no está disponible.</string>
+  <!-- Strings for lockscreen shortcut hints -->
   <string name="left_shortcut_hint">Desliza hacia la derecha para %1$s</string>
   <string name="right_shortcut_hint">Desliza hacia la izquierda para %1$s</string>
   <string name="lockscreen_message">Toca un icono a la izquierda o la derecha para reasignar un acceso rápido en la pantalla de bloqueo.</string>
@@ -42,9 +206,55 @@
   <string name="select_application">Seleccionar una aplicación</string>
   <string name="lockscreen_choose_action_title">Elegir una acción</string>
   <string name="lockscreen_none_target">Ninguno</string>
+  <!-- Content description of the data connection type HSPA+ for accessibility (not shown on the screen). [CHAR LIMIT=NONE] -->
   <string name="accessibility_data_connection_HP">HSPA+</string>
   <string name="pie_hour_format_12">hh:mm</string>
   <string name="pie_hour_format_24">HH:mm</string>
   <string name="pie_am_pm">a</string>
+  <!-- Kill app toast -->
   <string name="app_killed_message">Aplicación cerrada</string>
+  <!-- Screenrecord Notification Ticker -->
+  <string name="screenrecord_notif_ticker">La pantalla está siendo grabada</string>
+  <!-- Screenrecord notification title -->
+  <string name="screenrecord_notif_title">Grabando pantalla</string>
+  <!-- Screenrecord notification action: Stop -->
+  <string name="screenrecord_notif_stop">Detener</string>
+  <!-- Screenrecord notification action: show/hide pointer -->
+  <string name="screenrecord_notif_pointer_on">Mostrar puntero</string>
+  <string name="screenrecord_notif_pointer_off">Ocultar puntero</string>
+  <!-- Screen record notification error title -->
+  <string name="screenrecord_notif_error">No se puede grabar la pantalla</string>
+  <!-- On The Go -->
+  <string name="onthego_notif_ticker">On-The-Go activada</string>
+  <string name="onthego_notif_title">On-The-Go está activo</string>
+  <string name="onthego_notif_stop">Detener</string>
+  <string name="onthego_notif_options">Opciones</string>
+  <string name="onthego_notif_error">No se puede iniciar On-The-Go</string>
+  <string name="onthego_notif_restart">Reiniciar On-The-Go</string>
+  <string name="onthego_notif_camera_changed">Cambiado el modo de cámara</string>
+  <string name="onthego_transparency">Transparencia</string>
+  <string name="onthego_front_camera">Usar cámara frontal</string>
+  <string name="onthego_service_toggle">Reiniciar servicio automáticamente</string>
+  <!-- To do: Add QS OnTheGo
+    <string name="quick_settings_onthego_back">Rear Camera</string>
+    <string name="quick_settings_onthego_front">Front Camera</string>-->
+  <!-- App circle sidebar -->
+  <string name="app_float_maximize_item_title">Maximizar</string>
+  <string name="app_float_item_title">Vista flotante</string>
+  <string name="app_stop_item_title">Matar la aplicación</string>
+  <!-- SystemUI Tuner Parts -->
+  <string name="systemui_tuner_statusbar_title">Elementos de la barra de estado</string>
+  <string name="systemui_tuner_qs_title">Ajustes Rápidos</string>
+  <!-- Screenshot -->
+  <string name="shortcut_screenshot">Captura de pantalla</string>
+  <!-- Task Manager -->
+  <string name="task_manager_title">Administrador de tareas</string>
+  <string name="message_switch_fail">Puede cambiar a esta tarea, porque no tiene ninguna interfaz.</string>
+  <string name="tasklist_killall">Cerrar todos</string>
+  <string name="tasklist_memory_usage">"Memoria libre/Total: <xliff:g id="number">%s </xliff:g> / <xliff:g id="name"> %s </xliff:g>"</string>
+  <string name="message_keep_one_launcher">Debe tener al menos una actividad Home!</string>
+  <string name="toast_airplane_mode_hotspot">Desactivar modo avión antes de activar</string>
+  <!-- Notification which notifies user flashlight is enabled -->
+  <string name="quick_settings_tile_flashlight_not_title">Linterna encendida</string>
+  <string name="quick_settings_tile_flashlight_not_summary">Pulse para apagar</string>
 </resources>

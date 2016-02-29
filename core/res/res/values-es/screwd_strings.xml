@@ -19,25 +19,44 @@
 */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- kill app long press back -->
   <string name="app_killed_message">Aplicación Cerrada </string>
+  <!-- Title of an application permission, listed so the user can choose whether they want the application to do this. -->
   <string name="permlab_setKeyguardWallpaper">establecer fondo pantalla de bloqueo</string>
+  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_setKeyguardWallpaper">Permitir que una aplicación cambie el fondo de bloqueo.</string>
+  <!-- label for item that reboots the phone in phone options dialog -->
   <string name="global_action_reboot">Reiniciar el sistema</string>
+  <!-- Button to reboot the phone, within the Reboot Options dialog -->
   <string name="reboot_reboot">Reiniciar</string>
+  <!-- Button to reboot the phone into recovery, within the Reboot Options dialog -->
   <string name="reboot_recovery">Recovery</string>
+  <!-- Button to reboot the phone into bootloader, within the Reboot Options dialog -->
   <string name="reboot_bootloader">Bootloader</string>
+  <!-- Button to reboot the phone into download, within the Reboot Options dialog -->
   <string name="reboot_download">Download</string>
+  <!-- Button to soft reboot the device, within the Reboot Options dialog -->
   <string name="reboot_soft">Reinicio rápido</string>
+  <!-- Button to soft reboot the device, within the Reboot Options dialog -->
   <string name="reboot_systemui">Reiniciar SystemUI</string>
+  <!-- label for item that screenshots in phone options dialog -->
   <string name="global_action_screenshot">Captura de pantalla</string>
+  <string name="global_action_screenrecord">Grabar pantalla</string>
   <string name="global_action_current_user">Actual</string>
+  <!-- Slimseekbar -->
   <string name="default_string">Por defecto</string>
+  <!-- Title of dialog to confirm rebooting. -->
   <string name="reboot_title">Reiniciar</string>
+  <!-- Reboot Confirmation Dialog.  When the user chooses to reboot the device, there will
+         be a confirmation dialog.  This is the message. -->
   <string name="reboot_confirm" product="tablet">Tu tablet se reiniciará.</string>
   <string name="reboot_confirm" product="default">Tu teléfono se reiniciará.</string>
+  <!-- Reboot Progress Dialog. This is shown if the user chooses to reboot the phone. -->
   <string name="reboot_progress">Reiniciando</string>
   <string name="permlab_preventpower">anular tecla de encendido</string>
+  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_preventpower">Permitir a una aplicación para reemplazar la tecla de encendido.</string>
+  <!-- AOKP custom system animations -->
   <string name="animation_fade">Desvanecer</string>
   <string name="animation_slide_right">Deslizar a la derecha</string>
   <string name="animation_slide_left">Deslizar a la izquierda</string>
@@ -53,11 +72,40 @@
   <string name="animation_grow_shrink_left">Crecer (Izquierda)</string>
   <string name="animation_grow_shrink_right">Crecer (Derecha)</string>
   <string name="action_null">En blanco</string>
+  <!-- Vendor mismatched fingerprint warning [CHAR LIMIT=NONE] -->
   <string name="system_error_vendorprint">Parece que la vendor image puede estar desactualizada. Por favor, flashea la vendor image más reciente para tu dispositivo.</string>
+  <!-- Title of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permgrouplab_security">Seguridad</string>
+  <!-- Description of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permgroupdesc_security">Permisos relacionados con la información de seguridad del dispositivo.</string>
+  <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permlab_readPhoneBlacklist">lea la lista negra del teléfono</string>
+  <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_readPhoneBlacklist">Permite una aplicación leer información sobre números de teléfono que están bloqueados para llamadas o mensajes entrantes.</string>
+  <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permlab_changePhoneBlacklist">cambiar la lista negra del teléfono</string>
+  <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_changePhoneBlacklist">Permite una aplicación cambiar los números de teléfono que están bloqueados para llamadas o mensajes entrantes.</string>
+  <!-- label for item that takes On-The-Go in the phone options dialog -->
+  <string name="global_action_onthego">Modo On-The-Go</string>
+  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permlab_accessThemeService">acceso al servicio de temas</string>
+  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permdesc_accessThemeService">Permite que la aplicación acceda al servicio de temas. Nunca debería ser necesario para aplicaciones normales.</string>
+  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permlab_readThemes">leer información de los temas</string>
+  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permdesc_readThemesDesc">Permite que la aplicación lea los temas instalados y determine cual es el aplicado actualmente.</string>
+  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permlab_writeThemes">modificar tus temas</string>
+  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permdesc_writeThemesDesc">Permite que la aplicación añada nuevos temas y modifique el tema aplicado actualmente.</string>
+  <!-- Theme installation error notification -->
+  <string name="theme_install_error_title">Error al instalar el tema</string>
+  <string name="theme_install_error_message">%s falló en la instalación</string>
+  <string name="theme_reset_notification_title">Resetear tema</string>
+  <string name="theme_reset_notification_body">Tema de sistema restaurado debido a la aplicación de múltiples accidentes.</string>
+  <!-- Zen mode buttons -->
+  <string name="silent_mode_priority">Prioridad</string>
+  <string name="silent_mode_none">Silencio ninguno</string>
 </resources>
